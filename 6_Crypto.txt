@@ -1,0 +1,24 @@
+Crypto
+Namespace
+Cryptography and hashing routines.
+
+string Crypto::MD5(const string&in str)
+Calculate the MD5 hash of the given string.
+
+Returns string
+string Crypto::Sha1(const string&in str)
+Calculate the SHA1 hash of the given string.
+
+Returns string
+string Crypto::Sha256(const string&in str)
+Calculate the SHA256 hash of the given string.
+
+Returns string
+MemoryBuffer@ Crypto::Random(int length)
+Generates cryptographically secure random bytes and returns the buffer.
+
+Returns MemoryBuffer@
+string Crypto::RandomBase64(int length, bool url = false)
+Generates cryptographically secure random bytes and returns its base64 string.
+
+Returns string

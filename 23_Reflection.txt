@@ -1,0 +1,26 @@
+Reflection
+Namespace
+Info about game classes and members.
+
+class Reflection::MwMemberInfo
+Information about a type's member.
+
+class Reflection::MwClassInfo
+Information about a type.
+
+const MwClassInfo@ Reflection::GetType(const string&in name)
+Get the type info of the given name.
+
+Returns const Reflection::MwClassInfo@
+const MwClassInfo@ Reflection::GetType(uint id)
+Get the type info of the given ID.
+
+Returns const Reflection::MwClassInfo@
+const MwClassInfo@ Reflection::TypeOf(CMwNod@ nod)
+Get the type info of the given nod.
+
+Returns const Reflection::MwClassInfo@
+int Reflection::GetRefCount(CMwNod@ nod)
+Get the reference count of the given nod.
+
+Returns int

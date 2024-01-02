@@ -1,0 +1,11 @@
+UI::TableSortSpecs
+Class
+Sorting information for tables. Do not keep this object around! Use the Dirty property to see if the sorting changed, then set it to false when you've sorted your list.
+
+Properties
+bool Dirty
+Methods
+UI::TableColumnSortSpecs[]@ get_Specs()
+Property
+obj.Specs
+Returns UI::TableColumnSortSpecs[]@

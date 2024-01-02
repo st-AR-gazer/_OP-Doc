@@ -1,0 +1,33 @@
+Json
+Namespace
+Json deserialization and serialization.
+
+class Json::Value
+A value in a Json tree. Can be an array, object, or any other value.
+
+Value@ Json::Object()
+Create a new Json object value.
+
+Returns Json::Value@
+Value@ Json::Array()
+Create a new Json array value.
+
+Returns Json::Value@
+Value@ Json::Parse(const string&in json)
+Deserializes (parses) a string into a Json value tree.
+
+Returns Json::Value@
+string Json::Write(const Value@ value)
+Serializes a Json value tree to a string.
+
+Returns string
+Value@ Json::FromFile(const string&in filename)
+Deserialize (parses) contents of a file into a Json value tree. This can either be a file on disk or a file that's part of the plugin hierarchy.
+
+Returns Json::Value@
+void Json::ToFile(const string&in filename, const Value@ value)
+Serializes a Json value tree to a file.
+
+enum Json::Type
+Json value type that a Value might be.
+

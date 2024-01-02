@@ -1,0 +1,13 @@
+Meta::PluginCoroutine
+Class
+A coroutine for a plugin.
+
+Methods
+Meta::PluginCoroutine@ WithRunContext(Meta::RunContext)
+Sets the run context of the coroutine and returns itself for chaining.
+
+Returns Meta::PluginCoroutine@
+bool IsRunning()
+Returns true if the coroutine is still running, or false if the coroutine has finished its execution. This will also return true when the coroutine is suspended.
+
+Returns bool

@@ -1,0 +1,49 @@
+Discord
+Namespace
+Discord rich presence.
+
+class Discord::Status
+A Discord status update.
+
+class Discord::User
+Information about a user.
+
+void Discord::Initialize(const string&in applicationId)
+Initialize the Discord RPC API.
+
+void Discord::Shutdown()
+Shutdown the Discord RPC API.
+
+bool Discord::IsReady()
+Check if the Discord RPC API is ready.
+
+Returns bool
+User@ Discord::GetUser()
+Gets the currently logged in Discord user.
+
+Returns Discord::User@
+void Discord::SetStatus(const Status&in status)
+Sets the current Discord rich presence status.
+
+void Discord::Respond(const string&in userId, Response reply)
+Respond to a join request.
+
+string Discord::GetQueuedJoin()
+Get the queued up join secret to join.
+
+Returns string
+string Discord::GetQueuedSpectate()
+Get the queued up spectate secret to join.
+
+Returns string
+int Discord::GetNumJoinRequests()
+Get the amount of queued up join requests received.
+
+Returns int
+User@ Discord::GetQueuedJoinRequest()
+Gets the first queued up join request. Returns null if there's no more join requests.
+
+Returns Discord::User@
+enum Discord::Response
+The response code for Discord::Respond().
+

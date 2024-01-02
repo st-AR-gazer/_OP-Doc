@@ -1,0 +1,67 @@
+CMwStack
+Class
+Stack class used for calling engine procs.
+
+Behaviors
+~CMwStack()
+CMwStack()
+CMwStack(const CMwStack&in)
+Methods
+bool& CurrentBool(int offset = 0)
+Returns bool
+CMwNod@& CurrentNod(int offset = 0)
+Returns CMwNod@
+int& CurrentEnum(int offset = 0)
+Returns int
+iso4& CurrentIso4(int offset = 0)
+Returns iso4
+vec3& CurrentVec3(int offset = 0)
+Returns vec3
+int3& CurrentInt3(int offset = 0)
+Returns int3
+nat3& CurrentNat3(int offset = 0)
+Returns nat3
+int& CurrentInt(int offset = 0)
+Returns int
+uint& CurrentUint(int offset = 0)
+Returns uint
+float& CurrentFloat(int offset = 0)
+Returns float
+string& CurrentString(int offset = 0)
+Returns string
+wstring& CurrentWString(int offset = 0)
+Returns wstring
+MwId& CurrentId(int offset = 0)
+Returns MwId
+MwFastBuffer<bool>& CurrentBufferBool(int offset = 0)
+Returns MwFastBuffer<bool>
+MwFastBuffer<CMwNod@>& CurrentBufferNod(int offset = 0)
+Returns MwFastBuffer<CMwNod@>
+MwFastBuffer<int>& CurrentBufferEnum(int offset = 0)
+Returns MwFastBuffer<int>
+MwFastBuffer<iso4>& CurrentBufferIso4(int offset = 0)
+Returns MwFastBuffer<iso4>
+MwFastBuffer<vec2>& CurrentBufferVec2(int offset = 0)
+Returns MwFastBuffer<vec2>
+MwFastBuffer<vec3>& CurrentBufferVec3(int offset = 0)
+Returns MwFastBuffer<vec3>
+MwFastBuffer<int3>& CurrentBufferInt3(int offset = 0)
+Returns MwFastBuffer<int3>
+MwFastBuffer<nat3>& CurrentBufferNat3(int offset = 0)
+Returns MwFastBuffer<nat3>
+MwFastBuffer<int>& CurrentBufferInt(int offset = 0)
+Returns MwFastBuffer<int>
+MwFastBuffer<uint>& CurrentBufferUint(int offset = 0)
+Returns MwFastBuffer<uint>
+MwFastBuffer<float>& CurrentBufferFloat(int offset = 0)
+Returns MwFastBuffer<float>
+MwFastBuffer<string>& CurrentBufferString(int offset = 0)
+Returns MwFastBuffer<string>
+MwFastBuffer<wstring>& CurrentBufferWString(int offset = 0)
+Returns MwFastBuffer<wstring>
+MwFastBuffer<MwId>& CurrentBufferId(int offset = 0)
+Returns MwFastBuffer<MwId>
+int Index()
+Returns int
+int Count()
+Returns int

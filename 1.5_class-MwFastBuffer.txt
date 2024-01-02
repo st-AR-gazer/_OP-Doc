@@ -1,0 +1,31 @@
+MwFastBuffer
+Class
+Buffer type used in ManiaPlanet.
+
+Behaviors
+~MwFastBuffer()
+MwFastBuffer(int&in)
+Methods
+MwFastBuffer<T>& opAssign(const MwFastBuffer<T>&in)
+Operator
+obj = x
+Returns MwFastBuffer<T>
+T& opIndex(uint index)
+Operator
+obj[x]
+Returns T
+const T& opIndex(uint index) const
+Operator
+obj[x]
+Returns T
+uint Length() const
+Returns uint
+uint get_Length() const
+Property
+obj.Length
+Returns uint
+void Add(const T&in value)
+MwFastBuffer<T>& Remove(uint index)
+Returns MwFastBuffer<T>
+MwFastBuffer<T>& RemoveRange(uint index, uint count)
+Returns MwFastBuffer<T>

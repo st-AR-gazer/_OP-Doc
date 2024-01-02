@@ -1,0 +1,26 @@
+MwFastArray
+Class
+Array type used in ManiaPlanet.
+
+Behaviors
+~MwFastArray()
+MwFastArray(int&in)
+Methods
+MwFastArray<T>& opAssign(const MwFastArray<T>&in)
+Operator
+obj = x
+Returns MwFastArray<T>
+T& opIndex(uint index)
+Operator
+obj[x]
+Returns T
+const T& opIndex(uint index) const
+Operator
+obj[x]
+Returns T
+uint Length() const
+Returns uint
+uint get_Length() const
+Property
+obj.Length
+Returns uint

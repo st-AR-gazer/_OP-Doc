@@ -1,0 +1,43 @@
+Time
+Namespace
+Date and time.
+
+class Time::Info
+Information about a specific timestamp, simplified into its common components.
+
+uint64 Time::get_Now()
+Property
+Time::Now
+Gets the time (in milliseconds) since the game started.
+
+Returns uint64
+int64 Time::get_Stamp()
+Property
+Time::Stamp
+Gets the current machine timestamp in seconds. Also commonly referred to as epoch time.
+
+Returns int64
+string Time::FormatString(const string&in format, int64 stamp = - 1)
+Format a time into the given format as specified by strftime in the local time.
+
+Returns string
+string Time::FormatStringUTC(const string&in format, int64 stamp = - 1)
+Format a time into the given format as specified by strftime in UTC.
+
+Returns string
+string Time::Format(uint64 time, bool fractions = true, bool forceMinutes = true, bool forceHours = false, bool short = false)
+Format a game time (in milliseconds) to its race time representation. For example, 61234 will be "1:01.234".
+
+Returns string
+uint64 Time::ParseRelativeTime(const string&in time)
+Parses a relative game time from its race time representation.
+
+Returns uint64
+Info Time::Parse(int64 stamp = - 1)
+Parses a time into a structure containing individial time components in the local time.
+
+Returns Time::Info
+Info Time::ParseUTC(int64 stamp = - 1)
+Parses a time into a structure containing individial time components in UTC.
+
+Returns Time::Info

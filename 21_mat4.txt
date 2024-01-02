@@ -1,0 +1,20 @@
+mat4
+Namespace
+Static functions for the mat4 class.
+
+mat4 mat4::Identity()
+Returns mat4
+mat4 mat4::Translate(const vec3&in v)
+Returns mat4
+mat4 mat4::Rotate(float angle, const vec3&in dir)
+Returns mat4
+mat4 mat4::Scale(const vec3&in scale)
+Returns mat4
+mat4 mat4::Scale(float scale)
+Returns mat4
+mat4 mat4::Perspective(float yFov, float aspect, float nearZ, float farZ)
+Returns mat4
+mat4 mat4::Inverse(const mat4&in)
+Returns mat4
+mat4 mat4::LookAt(const vec3&in eye, const vec3&in center, const vec3&in up)
+Returns mat4

@@ -1,0 +1,64 @@
+IO
+Namespace
+Filesystem input/output.
+
+class IO::File
+Manages a file reading or writing stream.
+
+class IO::FileSource
+Manages a file reading stream from a file source, such as a plugin's zip or folder contents.
+
+string IO::FromStorageFolder(const string&in filename)
+Gets the absolute path for a file in your plugin's storage folder. This is typically C:\Users\Username\OpenplanetNext\PluginStorage\YourPluginIdentifier. When calling this function and the folder doesn't exist yet, it will automatically be created for you.
+
+Returns string
+string IO::FromDataFolder(const string&in filename)
+Gets the absolute path for a file in the data folder. This is typically C:\Users\Username\OpenplanetNext
+
+Returns string
+string IO::FromAppFolder(const string&in filename)
+Gets the absolute path for a file in the game's applicationfolder. This is where your game is installed, for example D:\Games\Trackmania
+
+Returns string
+string IO::FromUserGameFolder(const string&in filename)
+Gets the absolute path for a file in the game's user folder. This what the game considers the user folder, for example C:\Users\Username\Documents\Trackmania. Note that it is possible for this function to return only the given filename without any absolute path, in case the game doesn't have the necessary info, but you should consider this to happen very rarely (if ever).
+
+Returns string
+bool IO::FileExists(const string&in filename)
+Checks if the given path exists.
+
+Returns bool
+uint64 IO::FileSize(const string&in filename)
+Gets the size of the given file.
+
+Returns uint64
+int64 IO::FileModifiedTime(const string&in filename)
+Gets the last modified time of the given file.
+
+Returns int64
+void IO::Delete(const string&in filename)
+Deletes the given file.
+
+void IO::Move(const string&in filename, const string&in target)
+Moves the given file.
+
+bool IO::FolderExists(const string&in path)
+Checks if the given path exists.
+
+Returns bool
+void IO::CreateFolder(const string&in path, bool recursive = true)
+Creates a folder at the given location.
+
+void IO::DeleteFolder(const string&in path, bool recursive = false)
+Deletes the folder at the given location. When recursive is false, the directory is only deleted if it is empty. Please be careful when setting recursive to true.
+
+string[]@ IO::IndexFolder(const string&in path, bool recursive)
+Lists files and folders in the current folder. If recursive is true, it will only return files.
+
+Returns string[]@
+void IO::SetClipboard(const string&in text)
+Copies text on the clipboard.
+
+enum IO::FileMode
+The file mode to put the file stream in.
+

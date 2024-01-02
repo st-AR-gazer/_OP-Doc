@@ -1,0 +1,40 @@
+dictionaryValue
+Class
+Behaviors
+~dictionaryValue()
+dictionaryValue()
+Methods
+dictionaryValue& opAssign(const dictionaryValue&in)
+Operator
+obj = x
+Returns dictionaryValue
+dictionaryValue& opHndlAssign(const ?&in)
+Returns dictionaryValue
+dictionaryValue& opHndlAssign(const dictionaryValue&in)
+Returns dictionaryValue
+dictionaryValue& opAssign(const ?&in)
+Operator
+obj = x
+Returns dictionaryValue
+dictionaryValue& opAssign(double)
+Operator
+obj = x
+Returns dictionaryValue
+dictionaryValue& opAssign(int64)
+Operator
+obj = x
+Returns dictionaryValue
+void opCast(?&out)
+Operator
+cast<void>(obj)
+void opConv(?&out)
+Operator
+void(obj)
+int64 opConv()
+Operator
+int64(obj)
+Returns int64
+double opConv()
+Operator
+double(obj)
+Returns double

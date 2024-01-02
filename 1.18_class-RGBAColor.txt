@@ -1,0 +1,29 @@
+RGBAColor
+Class
+The RGBAColor type used in Maniaplanet.
+
+Properties
+uint8 r
+uint8 g
+uint8 b
+uint8 a
+uint rgba
+Behaviors
+~RGBAColor()
+RGBAColor()
+RGBAColor(const RGBAColor&in)
+RGBAColor(const vec3&in)
+RGBAColor(const vec4&in)
+Methods
+RGBAColor& opAssign(const RGBAColor&in)
+Operator
+obj = x
+Returns RGBAColor
+vec3 ToVec3()
+Converts this color to a vec3, ignoring the alpha value.
+
+Returns vec3
+vec4 ToVec4()
+Converts this color to a vec4.
+
+Returns vec4

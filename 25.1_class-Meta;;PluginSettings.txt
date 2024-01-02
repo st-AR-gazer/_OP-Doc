@@ -1,0 +1,78 @@
+Meta::PluginSetting
+Class
+Information about a plugin's setting.
+
+Methods
+string get_VarName()
+Property
+obj.VarName
+Returns string
+string get_Name()
+Property
+obj.Name
+Returns string
+Meta::PluginSettingType get_Type()
+Property
+obj.Type
+Returns Meta::PluginSettingType
+string get_TypeName()
+Property
+obj.TypeName
+Returns string
+string get_Description()
+Property
+obj.Description
+Returns string
+string get_Category()
+Property
+obj.Category
+Returns string
+bool get_Visible()
+Property
+obj.Visible
+Returns bool
+void Reset()
+bool ReadBool()
+Returns bool
+int ReadEnum()
+Returns int
+int ReadEnum(string&out name)
+Returns int
+float ReadFloat()
+Returns float
+double ReadDouble()
+Returns double
+int8 ReadInt8()
+Returns int8
+int16 ReadInt16()
+Returns int16
+int ReadInt32()
+Returns int
+string ReadString()
+Returns string
+vec2 ReadVec2()
+Returns vec2
+vec3 ReadVec3()
+Returns vec3
+vec4 ReadVec4()
+Returns vec4
+uint8 ReadUint8()
+Returns uint8
+uint16 ReadUint16()
+Returns uint16
+uint ReadUint32()
+Returns uint
+void WriteBool(bool)
+void WriteEnum(int)
+void WriteFloat(float)
+void WriteDouble(double)
+void WriteInt8(int8)
+void WriteInt16(int16)
+void WriteInt32(int)
+void WriteString(const string&in)
+void WriteVec2(const vec2&in)
+void WriteVec3(const vec3&in)
+void WriteVec4(const vec4&in)
+void WriteUint8(uint8)
+void WriteUint16(uint16)
+void WriteUint32(uint)

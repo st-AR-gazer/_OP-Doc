@@ -1,0 +1,17 @@
+UI::TableColumnSortSpecs
+Class
+Sorting specification for a single column of a table.
+
+Properties
+uint ColumnUserID
+int16 ColumnIndex
+int16 SortOrder
+Behaviors
+~TableColumnSortSpecs()
+TableColumnSortSpecs()
+TableColumnSortSpecs(const UI::TableColumnSortSpecs&in)
+Methods
+UI::SortDirection get_SortDirection()
+Property
+obj.SortDirection
+Returns UI::SortDirection

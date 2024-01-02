@@ -1,0 +1,9 @@
+XML
+Namespace
+XML deserialization.
+
+class XML::Node
+A node within an XML tree.
+
+class XML::Document
+An XML tree document.

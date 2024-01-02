@@ -1,0 +1,67 @@
+Fids
+Namespace
+Game files and folders.
+
+CSystemFidFile@ Fids::GetResource(const string&in path)
+Gets a fid from the Resources drive.
+
+Returns CSystemFidFile@
+CSystemFidFile@ Fids::GetProgramData(const string&in path)
+Gets a fid from the ProgramData drive.
+
+Returns CSystemFidFile@
+CSystemFidFile@ Fids::GetUser(const string&in path)
+Gets a fid from the User drive.
+
+Returns CSystemFidFile@
+CSystemFidFile@ Fids::GetGame(const string&in path)
+Gets a fid from the Game drive.
+
+Returns CSystemFidFile@
+CSystemFidFile@ Fids::GetFake(const string&in path)
+Gets a fid from the Fake drive.
+
+Returns CSystemFidFile@
+CSystemFidsFolder@ Fids::GetResourceFolder(const string&in path)
+Gets a fid container from the Resources drive.
+
+Returns CSystemFidsFolder@
+CSystemFidsFolder@ Fids::GetProgramDataFolder(const string&in path)
+Gets a fid container from the ProgramData drive.
+
+Returns CSystemFidsFolder@
+CSystemFidsFolder@ Fids::GetUserFolder(const string&in path)
+Gets a fid container from the User drive.
+
+Returns CSystemFidsFolder@
+CSystemFidsFolder@ Fids::GetGameFolder(const string&in path)
+Gets a fid container from the Game drive.
+
+Returns CSystemFidsFolder@
+CSystemFidsFolder@ Fids::GetFakeFolder(const string&in path)
+Gets a fid container from the Fake drive.
+
+Returns CSystemFidsFolder@
+CMwNod@ Fids::Preload(CSystemFidFile@ fid)
+Preloads the nod for the fid.
+
+Returns CMwNod@
+bool Fids::Extract(CSystemFidFile@ fid, bool hookMethod = false)
+Extracts the file to disk.
+
+Returns bool
+string Fids::GetFullPath(CSystemFidFile@ fid)
+Gets the full path of the fid.
+
+Returns string
+void Fids::UpdateTree(CSystemFidsFolder@ fids, bool withFiles = true)
+Updates the fid collection tree by rescanning the disk.
+
+CSystemFidFile@ Fids::GetFidsFile(CSystemFidsFolder@ fids, const string&in path)
+Get a fid from the given path in the given collection.
+
+Returns CSystemFidFile@
+CSystemFidsFolder@ Fids::GetFidsFolder(CSystemFidsFolder@ fids, const string&in path)
+Get a fid collection from the given path in this collection.
+
+Returns CSystemFidsFolder@

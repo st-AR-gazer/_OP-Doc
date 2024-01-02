@@ -1,0 +1,55 @@
+quat
+Class
+A quaternion.
+
+Properties
+float x
+float y
+float z
+float w
+Behaviors
+~quat()
+quat()
+quat(const vec3&in euler)
+quat(const vec3&in axis, float angle)
+quat(float x, float y, float z, float w)
+quat(const mat3&in m)
+quat(const mat4&in m)
+quat(const quat&in)
+Methods
+quat opMul(const quat&in)
+Operator
+obj * x
+Returns quat
+vec3 opMul(const vec3&in)
+Operator
+obj * x
+Returns vec3
+quat opMul_r(const quat&in)
+Operator
+x * obj
+Returns quat
+vec3 opMul_r(const vec3&in)
+Operator
+x * obj
+Returns vec3
+vec3 get_xyz() const
+Property
+obj.xyz
+Returns vec3
+float Angle() const
+Returns float
+vec3 Axis() const
+Returns vec3
+vec3 Euler() const
+Returns vec3
+quat Inverse() const
+Returns quat
+float Length() const
+Returns float
+float LengthSquared() const
+Returns float
+quat Normalized() const
+Returns quat
+string ToString() const
+Returns string

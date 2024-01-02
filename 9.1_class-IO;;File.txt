@@ -1,0 +1,42 @@
+IO::File
+Class
+Manages a file reading or writing stream.
+
+Behaviors
+~File()
+File()
+File(const string&in filename)
+File(const string&in filename, IO::FileMode mode)
+Methods
+void Open(const string&in filename, IO::FileMode mode)
+void Open(IO::FileMode mode)
+void Close()
+uint64 Size()
+Returns uint64
+bool EOF()
+Returns bool
+void Flush()
+IO::FileMode GetMode()
+Returns IO::FileMode
+void SetPos(uint64 pos)
+uint64 Pos()
+Returns uint64
+MemoryBuffer@ Read(uint64 size)
+Returns MemoryBuffer@
+void Write(const MemoryBuffer&in buffer)
+string ReadLine()
+Returns string
+string ReadToEnd()
+Returns string
+void Write(const uint8&in i)
+void Write(const uint16&in i)
+void Write(const uint&in i)
+void Write(const uint64&in i)
+void Write(const int8&in i)
+void Write(const int16&in i)
+void Write(const int&in i)
+void Write(const int64&in i)
+void Write(const float&in i)
+void Write(const double&in i)
+void Write(const string&in str)
+void WriteLine(const string&in str = "")

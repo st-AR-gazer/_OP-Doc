@@ -1,0 +1,16 @@
+Draw
+Namespace
+Limited drawing functions.
+
+int Draw::GetWidth()
+Gets the width of the game's resolution.
+
+Returns int
+int Draw::GetHeight()
+Gets the height of the game's resolution.
+
+Returns int
+vec2 Draw::MeasureString(const string&in str, UI::Font@ font = null, float size = 0.0f, float wrapWidth = 0.0f)
+Calculates the size that a string will be drawn at.
+
+Returns vec2

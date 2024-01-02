@@ -1,0 +1,4 @@
+vec2 GetSize()
+Gets the size of the texture in pixels.
+
+Returns vec2

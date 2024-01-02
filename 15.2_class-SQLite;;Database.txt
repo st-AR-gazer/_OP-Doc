@@ -1,0 +1,17 @@
+SQLite::Database
+Class
+An SQLite database.
+
+Behaviors
+SQLite::Database@ Database()
+Returns SQLite::Database@
+SQLite::Database@ Database(const string&in path)
+Returns SQLite::Database@
+Methods
+void Execute(const string&in query)
+Run a query directly against the database without binding any parameters or returning any rows.
+
+SQLite::Statement@ Prepare(const string&in query)
+Prepare a query in the database. The query is not executed immediately.
+
+Returns SQLite::Statement@

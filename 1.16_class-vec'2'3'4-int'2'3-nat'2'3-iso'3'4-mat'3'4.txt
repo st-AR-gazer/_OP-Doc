@@ -1,0 +1,182 @@
+vec4
+Class
+A 4-dimensional vector.
+
+Properties
+float x
+float y
+float z
+float w
+Behaviors
+~vec4()
+vec4()
+vec4(float scalar)
+vec4(float x, float y, float z, float w)
+vec4(const vec3&in xyz, float w)
+vec4(const vec2&in xy, const vec2&in zw)
+vec4(const vec4&in)
+Methods
+float opIndex() const
+Operator
+obj[x]
+Returns float
+vec4 opAdd(const vec4&in) const
+Operator
+obj + x
+Returns vec4
+vec4 opSub(const vec4&in) const
+Operator
+obj - x
+Returns vec4
+vec4 opMul(const vec4&in) const
+Operator
+obj * x
+Returns vec4
+vec4 opDiv(const vec4&in) const
+Operator
+obj / x
+Returns vec4
+vec4 opAdd(float) const
+Operator
+obj + x
+Returns vec4
+vec4 opSub(float) const
+Operator
+obj - x
+Returns vec4
+vec4 opMul(float) const
+Operator
+obj * x
+Returns vec4
+vec4 opDiv(float) const
+Operator
+obj / x
+Returns vec4
+vec4 opAdd_r(float) const
+Operator
+x + obj
+Returns vec4
+vec4 opSub_r(float) const
+Operator
+x - obj
+Returns vec4
+vec4 opMul_r(float) const
+Operator
+x * obj
+Returns vec4
+vec4 opDiv_r(float) const
+Operator
+x / obj
+Returns vec4
+vec4& opAddAssign(const vec4&in)
+Operator
+obj += x
+Returns vec4
+vec4& opSubAssign(const vec4&in)
+Operator
+obj -= x
+Returns vec4
+vec4& opMulAssign(const vec4&in)
+Operator
+obj *= x
+Returns vec4
+vec4& opDivAssign(const vec4&in)
+Operator
+obj /= x
+Returns vec4
+vec4& opAddAssign(float)
+Operator
+obj += x
+Returns vec4
+vec4& opSubAssign(float)
+Operator
+obj -= x
+Returns vec4
+vec4& opMulAssign(float)
+Operator
+obj *= x
+Returns vec4
+vec4& opDivAssign(float)
+Operator
+obj /= x
+Returns vec4
+bool opEquals(const vec4&in)
+Operator
+obj == x, obj != x
+Returns bool
+float Length() const
+Returns float
+float LengthSquared() const
+Returns float
+vec4 Normalized() const
+Returns vec4
+vec2 get_xy() const
+Property
+obj.xy
+Returns vec2
+vec3 get_xyz() const
+Property
+obj.xyz
+Returns vec3
+vec2 get_yz() const
+Property
+obj.yz
+Returns vec2
+vec3 get_yzw() const
+Property
+obj.yzw
+Returns vec3
+vec2 get_zw() const
+Property
+obj.zw
+Returns vec2
+string ToString() const
+Returns string
+
+
+
+
+
+
+
+
+
+___________________________
+
+
+
+
+
+
+class vec2
+A 2-dimensional vector.
+
+class vec3
+A 3-dimensional vector.
+
+class vec4
+A 4-dimensional vector.
+
+class int2
+A 2-dimensional vector for integers.
+
+class int3
+A 3-dimensional vector for integers.
+
+class nat2
+A 2-dimensional vector for unsigned integers.
+
+class nat3
+A 3-dimensional vector for unsigned integers.
+
+class iso3
+A matrix with 3 rows and 2 columns.
+
+class mat3
+A matrix with 3 rows and 3 columns.
+
+class iso4
+A matrix with 4 rows and 3 columns.
+
+class mat4
+A matrix with 4 rows and 4 columns.

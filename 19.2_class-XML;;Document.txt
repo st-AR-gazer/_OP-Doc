@@ -1,0 +1,17 @@
+XML::Document
+Class
+An XML tree document.
+
+Behaviors
+XML::Document@ Document()
+Returns XML::Document@
+XML::Document@ Document(const string&in xml)
+Returns XML::Document@
+Methods
+void LoadString(const string&in xml)
+Load an XML tree into this document by parsing the given string.
+
+XML::Node Root()
+Get the root node of the document.
+
+Returns XML::Node

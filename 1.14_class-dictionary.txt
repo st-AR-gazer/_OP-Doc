@@ -1,0 +1,44 @@
+dictionary
+Class
+The main dictionary type used in Openplanet.
+
+Behaviors
+dictionary@ dictionary()
+Returns dictionary@
+dictionary@ $list(int&in) { repeat { string, ? } }
+Returns dictionary@
+Methods
+dictionary& opAssign(const dictionary&in)
+Operator
+obj = x
+Returns dictionary
+void Set(const string&in, const ?&in)
+bool Get(const string&in, ?&out) const
+Returns bool
+void Set(const string&in, const int64&in)
+bool Get(const string&in, int64&out) const
+Returns bool
+void Set(const string&in, const double&in)
+bool Get(const string&in, double&out) const
+Returns bool
+bool Exists(const string&in) const
+Returns bool
+bool IsEmpty() const
+Returns bool
+uint GetSize() const
+Returns uint
+bool Delete(const string&in)
+Returns bool
+void DeleteAll()
+string[]@ GetKeys() const
+Returns string[]@
+dictionaryValue& opIndex(const string&in)
+Operator
+obj[x]
+Returns dictionaryValue
+const dictionaryValue& opIndex(const string&in) const
+Operator
+obj[x]
+Returns dictionaryValue
+Json::Value@ ToJson() const
+Returns Json::Value@

@@ -1,0 +1,12 @@
+Meta::PluginIndex
+Class
+An index of plugin information that can be sorted by its dependency tree.
+
+Behaviors
+Meta::PluginIndex@ PluginIndex()
+Returns Meta::PluginIndex@
+Methods
+void AddTree(Meta::Plugin@ plugin)
+void Add(Meta::Plugin@ plugin)
+Meta::PluginIndexItem[]@ TopologicalSort()
+Returns Meta::PluginIndexItem[]@

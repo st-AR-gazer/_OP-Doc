@@ -1,0 +1,9 @@
+Dev::ForceCast
+Class
+Behaviors
+~ForceCast()
+ForceCast(int&in, const ?&in)
+Methods
+T& Get()
+Returns T
+void Set(const ?&in)

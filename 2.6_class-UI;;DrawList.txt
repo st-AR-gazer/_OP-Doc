@@ -1,0 +1,68 @@
+UI::DrawList
+Class
+A drawing list for a layer on the UI.
+
+Methods
+void PushClipRect(const vec4&in rect, bool intersectWithCurrentClipRect = false)
+Pushes a scissoring rectangle to the stack.
+
+void PushClipRectFullScreen()
+Pushes a fullscreen scissoring rectangle to the stack.
+
+void PopClipRect()
+Pops a previously pushed scissoring rectangle to the stack.
+
+void AddRect(const vec4&in rect, const vec4&in color, float rounding = 0.0f, float thickness = 1.0f)
+Draws a border rectangle.
+
+void AddRectFilled(const vec4&in rect, const vec4&in color, float rounding = 0.0f)
+Draws a filled rectangle.
+
+void AddRectFilledMultiColor(const vec4&in rect, const vec4&in colUL, const vec4&in colUR, const vec4&in colBL, const vec4&in colBR)
+Draws a filled rectangle.
+
+void AddQuad(const vec2&in topLeft, const vec2&in topRight, const vec2&in bottomRight, const vec2&in bottomLeft, const vec4&in color, float thickness = 1.0f)
+Draws a border quad.
+
+void AddQuadFilled(const vec2&in topLeft, const vec2&in topRight, const vec2&in bottomRight, const vec2&in bottomLeft, const vec4&in color)
+Draws a filled quad.
+
+void AddTriangle(const vec2&in p1, const vec2&in p2, const vec2&in p3, const vec4&in color, float thickness = 1.0f)
+Draws a border triangle.
+
+void AddQuadFilled(const vec2&in p1, const vec2&in p2, const vec2&in p3, const vec4&in color)
+Draws a filled triangle.
+
+void AddCircle(const vec2&in pos, float radius, const vec4&in color, int segments = 0, float thickness = 1.0f)
+Draws a border circle.
+
+void AddCircleFilled(const vec2&in pos, float radius, const vec4&in color, int segments = 0)
+Draws a filled circle.
+
+void AddNgon(const vec2&in pos, float radius, const vec4&in color, int segments, float thickness = 1.0f)
+Draws a border N-gon.
+
+void AddNgonFilled(const vec2&in pos, float radius, const vec4&in color, int segments)
+Draws a filled N-gon.
+
+void AddLine(const vec2&in a, const vec2&in b, const vec4&in color, float thickness = 1.0f)
+Draws a line.
+
+void AddText(const vec2&in pos, const vec4&in color, const string&in str, UI::Font@ font = null, float size = 0.0f, float wrapWidth = 0.0f)
+Draws a text.
+
+void AddImage(UI::Texture@ texture, const vec2&in pos)
+Draws a texture.
+
+void AddImage(UI::Texture@ texture, const vec2&in pos, const vec2&in size)
+Draws a texture scaled to a specific size.
+
+void AddImage(UI::Texture@ texture, const vec2&in pos, const vec2&in size, uint color)
+Draws a texture scaled to a specific size and blend color (in 0xRRGGBBAA hexadecimal format).
+
+void AddImage(UI::Texture@ texture, const vec2&in pos, const vec2&in size, uint color, float rotation, const vec2&in origin = vec2 ( 0 , 0 ))
+Draws a texture scaled to a specific size, blend color (in 0xRRGGBBAA hexadecimal format), and rotation around an origin.
+
+void AddImage(UI::Texture@ texture, const vec2&in pos, const vec2&in size, uint color, const vec4&in uv)
+Draws a texture with the given UV pixel offset.
+

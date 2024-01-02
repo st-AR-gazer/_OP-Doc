@@ -1,0 +1,11 @@
+Auth
+Namespace
+Third party API authentication.
+
+class Auth::PluginAuthTask
+An asynchronous authentication task with the Openplanet and Nadeo backends for the current plugin.
+
+PluginAuthTask@ Auth::GetToken()
+Starts a task that authenticates the current user with the Openplanet and Nadeo backends. This is useful to authenticate users with external third party services securely. Note that you must have authentication enabled in your plugin admin panel for this to work. The resulting token must be sent to your server, which should validate it using the Openplanet.dev API.
+
+Returns Auth::PluginAuthTask@

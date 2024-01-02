@@ -1,0 +1,64 @@
+array
+Class
+The main array type used in Openplanet. For usage information, see Angelscript's documentation. Note that the members are not named the same in Openplanet as they are normally in Angelscript.
+
+Behaviors
+T[]@ array(int&in)
+Returns T[]@
+T[]@ array(int&in, uint length)
+Returns T[]@
+T[]@ array(int&in, uint length, const T&in value)
+Returns T[]@
+T[]@ $list(int&in type, int&in list) { repeat T }
+Returns T[]@
+Methods
+T& opIndex(uint index)
+Operator
+obj[x]
+Returns T
+const T& opIndex(uint index) const
+Operator
+obj[x]
+Returns T
+T[]& opAssign(const T[]&in)
+Operator
+obj = x
+Returns T[]
+void InsertAt(uint index, const T&in value)
+void InsertAt(uint index, const T[]&inout arr)
+void InsertLast(const T&in value)
+void RemoveAt(uint index)
+void RemoveLast()
+void RemoveRange(uint start, uint count)
+void Reserve(uint length)
+void Resize(uint length)
+void SortAsc()
+void SortAsc(uint startAt, uint count)
+void SortDesc()
+void SortDesc(uint startAt, uint count)
+void Reverse()
+int Find(const T&in value) const
+Returns int
+int Find(uint startAt, const T&in value) const
+Returns int
+int FindByRef(const T&in value) const
+Returns int
+int FindByRef(uint startAt, const T&in value) const
+Returns int
+bool opEquals(const T[]&in) const
+Operator
+obj == x, obj != x
+Returns bool
+bool IsEmpty() const
+Returns bool
+void Sort(T[]::less&in, uint startAt = 0, uint count = uint ( - 1 ))
+uint get_Length() const
+Property
+obj.Length
+Returns uint
+void set_Length(uint)
+Property
+obj.Length
+void SortNonConst(T[]::less_nonconst&in, uint startAt = 0, uint count = uint ( - 1 ))
+Json::Value@ ToJson() const
+Returns Json::Value@

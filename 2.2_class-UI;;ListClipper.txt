@@ -1,0 +1,21 @@
+UI::ListClipper
+Class
+Helper class to manually clip large lists of items. To use this, create an instance on the stack. Call Begin, or pass the the total item count the constructor which will call Begin for you. Make a while loop with the condition clipper.Step(). Inside of the loop, make a for loop with int i = clipper.DisplayStart; i < clipper.DisplayEnd; i++. Inside of the for loop, put whatever UI elements you need for the item at index i. Remember that all UI items in the list must be the same height for ListClipper to work.
+
+Properties
+int DisplayStart
+int DisplayEnd
+int ItemsCount
+float ItemsHeight
+Behaviors
+~ListClipper()
+ListClipper(int items_count = - 1, float items_height = - 1.0f)
+Methods
+void Begin(int items_count, float items_height = - 1.0f)
+bool Step()
+Call until it returns false. The DisplayStart/DisplayEnd fields will be set and you can process/draw those items.
+
+Returns bool
+void End()
+Automatically called on the last call of Step() that returns false.
+

@@ -1,0 +1,20 @@
+Settings::Section
+Class
+Represents a section in the settings file.
+
+Methods
+void Clear()
+bool GetBool(const string&in key, bool def = false)
+Returns bool
+int GetInt(const string&in key, int def = 0)
+Returns int
+float GetFloat(const string&in key, float def = 0.0f)
+Returns float
+string GetString(const string&in key, const string&in def = "")
+Returns string
+void SetBool(const string&in key, bool def = false)
+void SetInt(const string&in key, int def = 0)
+void SetFloat(const string&in key, float def = 0.0f)
+void SetString(const string&in key, const string&in def = "")
+string[]@ GetKeys()
+Returns string[]@

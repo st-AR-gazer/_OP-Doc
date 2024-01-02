@@ -1,0 +1,14 @@
+vec2 GetSize()
+Gets the size of the texture in pixels.
+
+Returns vec2
+
+
+
+
+float get_FontSize()
+Property
+obj.FontSize
+Gets the size of the font.
+
+Returns float

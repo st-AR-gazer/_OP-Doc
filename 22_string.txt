@@ -1,0 +1,8 @@
+string
+Namespace
+Static functions for the string class.
+
+string string::Join(const string[]&in arr, const string&in delimiter)
+Join an array of strings into a single where each item is separated using the given delimiter.
+
+Returns string

@@ -1,0 +1,22 @@
+IO::FileSource
+Class
+Manages a file reading stream from a file source, such as a plugin's zip or folder contents.
+
+Behaviors
+~FileSource()
+FileSource(const string&in filename)
+FileSource(const IO::FileSource&in)
+Methods
+uint64 Size()
+Returns uint64
+bool EOF()
+Returns bool
+void SetPos(uint64 pos)
+uint64 Pos()
+Returns uint64
+MemoryBuffer@ Read(uint64 size)
+Returns MemoryBuffer@
+string ReadLine()
+Returns string
+string ReadToEnd()
+Returns string

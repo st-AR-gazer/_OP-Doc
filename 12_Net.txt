@@ -1,0 +1,46 @@
+Net
+Namespace
+Networking and sockets.
+
+class Net::HttpRequest
+Holds the state of an executing HTTP request.
+
+class Net::Socket
+Represents a TCP socket.
+
+class Net::SecureSocket
+Represents a TCP socket with a TLS encryption layer.
+
+HttpRequest@ Net::HttpGet(const string&in url)
+Creates an HTTP GET request to the given URL and automatically starts the request.
+
+Returns Net::HttpRequest@
+HttpRequest@ Net::HttpPost(const string&in url, const string&in data = "", const string&in contentType = "application/x-www-form-urlencoded")
+Creates an HTTP POST request to the given URL and automatically starts the request.
+
+Returns Net::HttpRequest@
+HttpRequest@ Net::HttpHead(const string&in url)
+Creates an HTTP HEAD request to the given URL and automatically starts the request.
+
+Returns Net::HttpRequest@
+HttpRequest@ Net::HttpPut(const string&in url, const string&in data = "", const string&in contentType = "application/x-www-form-urlencoded")
+Creates an HTTP PUT request to the given URL and automatically starts the request.
+
+Returns Net::HttpRequest@
+HttpRequest@ Net::HttpDelete(const string&in url)
+Creates an HTTP DELETE request to the given URL and automatically starts the request.
+
+Returns Net::HttpRequest@
+HttpRequest@ Net::HttpPatch(const string&in url, const string&in data = "", const string&in contentType = "application/x-www-form-urlencoded")
+Creates an HTTP PATCH request to the given URL and automatically starts the request.
+
+Returns Net::HttpRequest@
+string Net::UrlEncode(const string&in str)
+URL encode a string.
+
+Returns string
+string Net::UrlDecode(const string&in str)
+URL decode a string.
+
+Returns string
+enum Net::HttpMethod

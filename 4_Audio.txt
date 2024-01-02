@@ -1,0 +1,26 @@
+Audio
+Namespace
+Playback of sounds.
+
+class Audio::Sample
+Represents an audio sample.
+
+class Audio::Voice
+Represents a currently playing voice of audio.
+
+Sample@ Audio::LoadSample(const string&in filename, bool streamed = false)
+Load a sound.
+
+Returns Audio::Sample@
+Sample@ Audio::LoadSample(MemoryBuffer&in buffer, bool streamed = false)
+Loads a sound from a memory buffer.
+
+Returns Audio::Sample@
+Voice@ Audio::Play(Sample@ sample, float gain = 1.0f)
+Plays the given sample and returns the voice, immediately starting playback.
+
+Returns Audio::Voice@
+Voice@ Audio::Start(Sample@ sample)
+Starts the given sample and returns the voice, but does not immediately begin playback. Use this if you want to modify voice parameters before the first audio frames play. Note that if you don't let a sample play out, it will leak memory!
+
+Returns Audio::Voice@

@@ -1,0 +1,642 @@
+Import::Function
+Class
+An imported symbol from a library.
+
+Methods
+Import::Library@ GetLibrary()
+Gets the Library from which this function is loaded.
+
+Returns Import::Library@
+void SetConvention(Import::CallConvention convention)
+Sets the call convention for this function. Note that on Windows x64, this function does nothing because there is only one convention.
+
+void Call()
+Calls the function and returns void.
+
+void Call(const ?&in)
+Calls the function with 1 argument and returns void.
+
+void Call(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns void.
+
+void Call(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns void.
+
+void Call(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns void.
+
+void Call(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns void.
+
+void Call(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns void.
+
+void Call(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns void.
+
+void Call(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns void.
+
+void Call(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns void.
+
+bool CallBool()
+Calls the function and returns bool.
+
+Returns bool
+bool CallBool(const ?&in)
+Calls the function with 1 argument and returns bool.
+
+Returns bool
+bool CallBool(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns bool.
+
+Returns bool
+bool CallBool(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns bool.
+
+Returns bool
+bool CallBool(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns bool.
+
+Returns bool
+bool CallBool(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns bool.
+
+Returns bool
+bool CallBool(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns bool.
+
+Returns bool
+bool CallBool(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns bool.
+
+Returns bool
+bool CallBool(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns bool.
+
+Returns bool
+bool CallBool(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns bool.
+
+Returns bool
+int8 CallInt8()
+Calls the function and returns int8.
+
+Returns int8
+int8 CallInt8(const ?&in)
+Calls the function with 1 argument and returns int8.
+
+Returns int8
+int8 CallInt8(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns int8.
+
+Returns int8
+int8 CallInt8(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns int8.
+
+Returns int8
+int8 CallInt8(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns int8.
+
+Returns int8
+int8 CallInt8(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns int8.
+
+Returns int8
+int8 CallInt8(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns int8.
+
+Returns int8
+int8 CallInt8(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns int8.
+
+Returns int8
+int8 CallInt8(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns int8.
+
+Returns int8
+int8 CallInt8(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns int8.
+
+Returns int8
+int16 CallInt16()
+Calls the function and returns int16.
+
+Returns int16
+int16 CallInt16(const ?&in)
+Calls the function with 1 argument and returns int16.
+
+Returns int16
+int16 CallInt16(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns int16.
+
+Returns int16
+int16 CallInt16(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns int16.
+
+Returns int16
+int16 CallInt16(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns int16.
+
+Returns int16
+int16 CallInt16(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns int16.
+
+Returns int16
+int16 CallInt16(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns int16.
+
+Returns int16
+int16 CallInt16(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns int16.
+
+Returns int16
+int16 CallInt16(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns int16.
+
+Returns int16
+int16 CallInt16(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns int16.
+
+Returns int16
+int CallInt32()
+Calls the function and returns int32.
+
+Returns int
+int CallInt32(const ?&in)
+Calls the function with 1 argument and returns int32.
+
+Returns int
+int CallInt32(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns int32.
+
+Returns int
+int CallInt32(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns int32.
+
+Returns int
+int CallInt32(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns int32.
+
+Returns int
+int CallInt32(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns int32.
+
+Returns int
+int CallInt32(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns int32.
+
+Returns int
+int CallInt32(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns int32.
+
+Returns int
+int CallInt32(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns int32.
+
+Returns int
+int CallInt32(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns int32.
+
+Returns int
+int64 CallInt64()
+Calls the function and returns int64.
+
+Returns int64
+int64 CallInt64(const ?&in)
+Calls the function with 1 argument and returns int64.
+
+Returns int64
+int64 CallInt64(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns int64.
+
+Returns int64
+int64 CallInt64(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns int64.
+
+Returns int64
+int64 CallInt64(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns int64.
+
+Returns int64
+int64 CallInt64(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns int64.
+
+Returns int64
+int64 CallInt64(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns int64.
+
+Returns int64
+int64 CallInt64(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns int64.
+
+Returns int64
+int64 CallInt64(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns int64.
+
+Returns int64
+int64 CallInt64(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns int64.
+
+Returns int64
+uint8 CallUInt8()
+Calls the function and returns uint8.
+
+Returns uint8
+uint8 CallUInt8(const ?&in)
+Calls the function with 1 argument and returns uint8.
+
+Returns uint8
+uint8 CallUInt8(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns uint8.
+
+Returns uint8
+uint8 CallUInt8(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns uint8.
+
+Returns uint8
+uint8 CallUInt8(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns uint8.
+
+Returns uint8
+uint8 CallUInt8(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns uint8.
+
+Returns uint8
+uint8 CallUInt8(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns uint8.
+
+Returns uint8
+uint8 CallUInt8(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns uint8.
+
+Returns uint8
+uint8 CallUInt8(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns uint8.
+
+Returns uint8
+uint8 CallUInt8(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns uint8.
+
+Returns uint8
+uint16 CallUInt16()
+Calls the function and returns uint16.
+
+Returns uint16
+uint16 CallUInt16(const ?&in)
+Calls the function with 1 argument and returns uint16.
+
+Returns uint16
+uint16 CallUInt16(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns uint16.
+
+Returns uint16
+uint16 CallUInt16(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns uint16.
+
+Returns uint16
+uint16 CallUInt16(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns uint16.
+
+Returns uint16
+uint16 CallUInt16(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns uint16.
+
+Returns uint16
+uint16 CallUInt16(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns uint16.
+
+Returns uint16
+uint16 CallUInt16(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns uint16.
+
+Returns uint16
+uint16 CallUInt16(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns uint16.
+
+Returns uint16
+uint16 CallUInt16(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns uint16.
+
+Returns uint16
+uint CallUInt32()
+Calls the function and returns uint32.
+
+Returns uint
+uint CallUInt32(const ?&in)
+Calls the function with 1 argument and returns uint32.
+
+Returns uint
+uint CallUInt32(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns uint32.
+
+Returns uint
+uint CallUInt32(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns uint32.
+
+Returns uint
+uint CallUInt32(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns uint32.
+
+Returns uint
+uint CallUInt32(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns uint32.
+
+Returns uint
+uint CallUInt32(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns uint32.
+
+Returns uint
+uint CallUInt32(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns uint32.
+
+Returns uint
+uint CallUInt32(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns uint32.
+
+Returns uint
+uint CallUInt32(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns uint32.
+
+Returns uint
+uint64 CallUInt64()
+Calls the function and returns uint64.
+
+Returns uint64
+uint64 CallUInt64(const ?&in)
+Calls the function with 1 argument and returns uint64.
+
+Returns uint64
+uint64 CallUInt64(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns uint64.
+
+Returns uint64
+uint64 CallUInt64(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns uint64.
+
+Returns uint64
+uint64 CallUInt64(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns uint64.
+
+Returns uint64
+uint64 CallUInt64(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns uint64.
+
+Returns uint64
+uint64 CallUInt64(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns uint64.
+
+Returns uint64
+uint64 CallUInt64(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns uint64.
+
+Returns uint64
+uint64 CallUInt64(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns uint64.
+
+Returns uint64
+uint64 CallUInt64(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns uint64.
+
+Returns uint64
+float CallFloat()
+Calls the function and returns float.
+
+Returns float
+float CallFloat(const ?&in)
+Calls the function with 1 argument and returns float.
+
+Returns float
+float CallFloat(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns float.
+
+Returns float
+float CallFloat(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns float.
+
+Returns float
+float CallFloat(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns float.
+
+Returns float
+float CallFloat(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns float.
+
+Returns float
+float CallFloat(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns float.
+
+Returns float
+float CallFloat(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns float.
+
+Returns float
+float CallFloat(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns float.
+
+Returns float
+float CallFloat(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns float.
+
+Returns float
+double CallDouble()
+Calls the function and returns double.
+
+Returns double
+double CallDouble(const ?&in)
+Calls the function with 1 argument and returns double.
+
+Returns double
+double CallDouble(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns double.
+
+Returns double
+double CallDouble(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns double.
+
+Returns double
+double CallDouble(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns double.
+
+Returns double
+double CallDouble(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns double.
+
+Returns double
+double CallDouble(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns double.
+
+Returns double
+double CallDouble(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns double.
+
+Returns double
+double CallDouble(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns double.
+
+Returns double
+double CallDouble(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns double.
+
+Returns double
+uint64 CallPointer()
+Calls the function and returns IntPtr.
+
+Returns uint64
+uint64 CallPointer(const ?&in)
+Calls the function with 1 argument and returns IntPtr.
+
+Returns uint64
+uint64 CallPointer(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns IntPtr.
+
+Returns uint64
+uint64 CallPointer(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns IntPtr.
+
+Returns uint64
+uint64 CallPointer(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns IntPtr.
+
+Returns uint64
+uint64 CallPointer(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns IntPtr.
+
+Returns uint64
+uint64 CallPointer(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns IntPtr.
+
+Returns uint64
+uint64 CallPointer(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns IntPtr.
+
+Returns uint64
+uint64 CallPointer(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns IntPtr.
+
+Returns uint64
+uint64 CallPointer(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns IntPtr.
+
+Returns uint64
+CMwNod@ CallNod()
+Calls the function and returns CMwNod@.
+
+Returns CMwNod@
+CMwNod@ CallNod(const ?&in)
+Calls the function with 1 argument and returns CMwNod@.
+
+Returns CMwNod@
+CMwNod@ CallNod(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns CMwNod@.
+
+Returns CMwNod@
+CMwNod@ CallNod(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns CMwNod@.
+
+Returns CMwNod@
+CMwNod@ CallNod(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns CMwNod@.
+
+Returns CMwNod@
+CMwNod@ CallNod(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns CMwNod@.
+
+Returns CMwNod@
+CMwNod@ CallNod(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns CMwNod@.
+
+Returns CMwNod@
+CMwNod@ CallNod(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns CMwNod@.
+
+Returns CMwNod@
+CMwNod@ CallNod(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns CMwNod@.
+
+Returns CMwNod@
+CMwNod@ CallNod(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns CMwNod@.
+
+Returns CMwNod@
+string CallString()
+Calls the function and returns string. Return type must be a valid C string.
+
+Returns string
+string CallString(const ?&in)
+Calls the function with 1 argument and returns string.
+
+Returns string
+string CallString(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns string.
+
+Returns string
+string CallString(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns string.
+
+Returns string
+string CallString(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns string.
+
+Returns string
+string CallString(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns string.
+
+Returns string
+string CallString(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns string.
+
+Returns string
+string CallString(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns string.
+
+Returns string
+string CallString(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns string.
+
+Returns string
+string CallString(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns string.
+
+Returns string
+wstring CallWString()
+Calls the function and returns wstring. Return type must be a valid wide C string.
+
+Returns wstring
+wstring CallWString(const ?&in)
+Calls the function with 1 argument and returns wstring.
+
+Returns wstring
+wstring CallWString(const ?&in, const ?&in)
+Calls the function with 2 arguments and returns wstring.
+
+Returns wstring
+wstring CallWString(const ?&in, const ?&in, const ?&in)
+Calls the function with 3 arguments and returns wstring.
+
+Returns wstring
+wstring CallWString(const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 4 arguments and returns wstring.
+
+Returns wstring
+wstring CallWString(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 5 arguments and returns wstring.
+
+Returns wstring
+wstring CallWString(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 6 arguments and returns wstring.
+
+Returns wstring
+wstring CallWString(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 7 arguments and returns wstring.
+
+Returns wstring
+wstring CallWString(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 8 arguments and returns wstring.
+
+Returns wstring
+wstring CallWString(const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in, const ?&in)
+Calls the function with 9 arguments and returns wstring.
+
+Returns wstring

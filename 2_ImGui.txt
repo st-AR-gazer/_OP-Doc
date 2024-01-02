@@ -1,0 +1,771 @@
+UI
+Namespace
+ImGui bindings.
+
+class UI::Texture
+Represents a texture for the UI API.
+
+class UI::Font
+Represents a font for the UI API.
+
+class UI::ListClipper
+Helper class to manually clip large lists of items. To use this, create an instance on the stack. Call Begin, or pass the the total item count the constructor which will call Begin for you. Make a while loop with the condition clipper.Step(). Inside of the loop, make a for loop with int i = clipper.DisplayStart; i < clipper.DisplayEnd; i++. Inside of the for loop, put whatever UI elements you need for the item at index i. Remember that all UI items in the list must be the same height for ListClipper to work.
+
+class UI::InputTextCallbackData
+Callback data for text input widgets. Do not keep handles of this around!
+
+class UI::TableColumnSortSpecs
+Sorting specification for a single column of a table.
+
+class UI::TableSortSpecs
+Sorting information for tables. Do not keep this object around! Use the Dirty property to see if the sorting changed, then set it to false when you've sorted your list.
+
+class UI::DrawList
+A drawing list for a layer on the UI.
+
+Texture@ UI::LoadTexture(const string&in filename)
+Load a texture for the UI API.
+
+Returns UI::Texture@
+Texture@ UI::LoadTexture(MemoryBuffer&in buffer)
+Load a texture for the UI API from a memory buffer.
+
+Returns UI::Texture@
+Font@ UI::LoadFont(const string&in filename, float size = 16.0f, int minChars = - 1, int maxChars = - 1, bool fallback = false, bool fallbackExtendedIcons = false, bool fallbackArial = false)
+Loads a font for use in the UI API. Note that fonts can take up a lot of memory, so be careful in how many characters you request here! The defaults are usually enough.
+
+Returns UI::Font@
+bool UI::Begin(const string&in title, int flags = UI::WindowFlags::NoCollapse)
+Begins an imgui window.
+
+Returns bool
+bool UI::Begin(const string&in title, bool&out open, int flags = UI::WindowFlags::NoCollapse)
+Begins an imgui window.
+
+Returns bool
+void UI::End()
+Ends an imgui window. Must always be called even if Begin returns false!
+
+void UI::BeginGroup()
+Begins a new group.
+
+void UI::EndGroup()
+Ends a group.
+
+void UI::BeginFormattingGroup()
+Begins the formatting group for $-style formatting. This means that 2 consecutive widgets will share the color stack (and the default text color) of the first widget.
+
+void UI::EndFormattingGroup()
+Ends the formatting group.
+
+void UI::BeginDisabled(bool disabled = true)
+Begins a group of disabled widgets.
+
+void UI::EndDisabled()
+Ends a group of disabled widgets.
+
+void UI::PushStyleColor(Col idx, const vec4&in col)
+Temporarily pushes a color change for the next widgets. You must call PopStyleColor() sometime after!
+
+void UI::PopStyleColor(int count = 1)
+Pops one or more temporary color changes.
+
+vec4 UI::GetStyleColor(Col idx)
+Gets the current style color.
+
+Returns vec4
+string UI::GetStyleColorName(Col idx)
+Gets the name of the given style color.
+
+Returns string
+void UI::PushStyleVar(StyleVar var, float value)
+Temporarily pushes a style change for the next widgets. You must call PopStyleVar() sometime after!
+
+void UI::PushStyleVar(StyleVar var, const vec2&in value)
+Temporarily pushes a style change for the next widgets. You must call PopStyleVar() sometime after!
+
+void UI::PopStyleVar(int count = 1)
+Pops one or more temporary style changes.
+
+float UI::GetStyleVarFloat(StyleVar var)
+Gets the current float value of a style variable.
+
+Returns float
+vec2 UI::GetStyleVarVec2(StyleVar var)
+Gets the current vector value of a style variable.
+
+Returns vec2
+float UI::GetScrollX()
+Get scrolling amount, from 0 to GetScrollMaxX().
+
+Returns float
+float UI::GetScrollY()
+Get scrolling amount, from 0 to GetScrollMaxY().
+
+Returns float
+void UI::SetScrollX(float x)
+Set scrolling amount, from 0 to GetScrollMaxX().
+
+void UI::SetScrollY(float y)
+Set scrolling amount, from 0 to GetScrollMaxY().
+
+float UI::GetScrollMaxX()
+Get maximum horizontal scrolling amount.
+
+Returns float
+float UI::GetScrollMaxY()
+Get maximum vertical scrolling amount.
+
+Returns float
+void UI::SetScrollHereX(float center_x_ratio = 0.5f)
+Adjust scrolling amount to make current cursor position visible. center_x_ratio=0.0: left, 0.5: center, 1.0: right. When using to make a "default / current item" visible, consider using SetItemDefaultFocus() instead.
+
+void UI::SetScrollHereY(float center_y_ratio = 0.5f)
+Adjust scrolling amount to make current cursor position visible. center_y_ratio=0.0: top, 0.5: center, 1.0: bottom. When using to make a "default / current item" visible, consider using SetItemDefaultFocus() instead.
+
+void UI::SetScrollFromPosX(float local_x, float center_x_ratio = 0.5f)
+Adjust scrolling amount to make given position visible. Generally GetCursorStartPos() + offset to compute a valid position.
+
+void UI::SetScrollFromPosY(float local_y, float center_y_ratio = 0.5f)
+Adjust scrolling amount to make given position visible. Generally GetCursorStartPos() + offset to compute a valid position.
+
+void UI::SetNextWindowSize(int w, int h, Cond cond = UI::Cond::Appearing)
+Sets the size for the next window created with UI::Begin(). The size is automatically scaled by UI::GetScale().
+
+void UI::SetNextWindowPos(int x, int y, Cond cond = UI::Cond::Appearing, float pivotx = 0.0f, float pivoty = 0.0f)
+Sets the position for the next window created with UI::Begin(). Pivot floats can be used to align the window on the given point. The position is automatically scaled by UI::GetScale().
+
+void UI::SetNextWindowContentSize(int w, int h = 0)
+Sets the size for the next window contents. Set height to 0 to only set width. The size is automatically scaled by UI::GetScale().
+
+void UI::SetNextItemWidth(float w)
+Sets the width of the next item. The width is automatically scaled by UI::GetScale().
+
+void UI::SetNextItemOpen(bool is_open, Cond cond = UI::Cond::None)
+Sets whether the next item should be open.
+
+void UI::PushID(const ?&in)
+Pushes an ID to the stack.
+
+void UI::PushID(const string&in id)
+Pushes an ID to the stack.
+
+void UI::PopID()
+Pops an ID from the stack.
+
+void UI::PushFont(Font@ font)
+Pushes a font to the stack.
+
+void UI::PopFont()
+Pops a font from the stack.
+
+void UI::PushItemWidth(float item_width)
+Pushes width of items.
+
+void UI::PopItemWidth()
+Pops width of items.
+
+void UI::SameLine()
+Marks the next control to be drawn on the same line as the last one.
+
+void UI::NewLine()
+Marks the next control to be drawn on the next line rather than the current line.
+
+void UI::Indent(float w = 0.0f)
+Move content position toward the right, by w, or style.IndentSpacing if w <= 0.
+
+void UI::Unindent(float w = 0.0f)
+move content position back to the left, by w, or style.IndentSpacing if w <= 0.
+
+void UI::Separator()
+Separator line.
+
+void UI::Dummy(const vec2&in size)
+Dummy space.
+
+void UI::Dummy(const vec2&in size, float text_baseline_y)
+Dummy space with a custom baseline.
+
+void UI::PushTextWrapPos(float wrap_local_pos_x = 0.0f)
+Push word-wrapping position for Text*() commands. Less than 0: no wrapping; 0: wrap to end of window (or column); > 0: wrap at the given position in window local space.
+
+void UI::PopTextWrapPos()
+Pops word-wrapping position for Text*() commands.
+
+int UI::CalcWordWrapPosition(float scale, const string&in text, float wrap_width, int text_offset = 0, Font@ font = null)
+Calculates the word wrapping position of the given string.
+
+Returns int
+bool UI::Button(const string&in label, const vec2&in size = vec2 ( ))
+Clickable button. Returns true if it was clicked.
+
+Returns bool
+bool UI::ButtonColored(const string&in label, float h, float s = 0.6f, float v = 0.6f, const vec2&in size = vec2 ( ))
+Clickable button with a specific color. Returns true if it was clicked.
+
+Returns bool
+bool UI::InvisibleButton(const string&in id, const vec2&in size, int flags = UI::ButtonFlags::None)
+Clickable invisible button. Returns true if it was clicked.
+
+Returns bool
+void UI::Text(const string&in text, int length = - 1)
+Simple text label with an optional length.
+
+void UI::TextWrapped(const string&in text)
+Simple text label with word wrapping.
+
+void UI::TextWrappedWindow(const string&in text, float new_line_padding = 0, float extra_wrap_size = 0)
+Simple text label with word wrapping, but the text resets to the start of the window instead of the starting cursor position.
+
+void UI::TextDisabled(const string&in text)
+Simple text label, but in its disabled color.
+
+void UI::LabelText(const string&in label, const string&in text)
+Text label with a value.
+
+void UI::PlotLines(const string&in label, const float[]&in values, int offset = 0, float height = 0.0f)
+Line graph.
+
+void UI::PlotHistogram(const string&in label, const float[]&in values, int offset = 0, float height = 0.0f)
+Histogram graph.
+
+bool UI::Checkbox(const string&in label, bool value)
+Checkbox. For value, pass the current value. The return value is the new value.
+
+Returns bool
+bool UI::RadioButton(const string&in label, bool active)
+Radio button. For active, pass whether the current value is active. Returns true if the button was pressed.
+
+Returns bool
+void UI::ProgressBar(float fraction, const vec2&in size = vec2 ( - 1 , 0 ), const string&in overlay = "")
+Progress bar.
+
+bool UI::BeginMenuBar()
+Begins an imgui menu bar.
+
+Returns bool
+void UI::EndMenuBar()
+Ends an imgui menu bar.
+
+bool UI::BeginMenu(const string&in label, bool enabled = true)
+Begins an imgui menu.
+
+Returns bool
+void UI::EndMenu()
+Ends an imgui menu.
+
+bool UI::MenuItem(const string&in label, const string&in shortcut = "", bool selected = false, bool enabled = true)
+Clickable menu item. Returns true when clicked.
+
+Returns bool
+bool UI::IsWindowAppearing()
+Returns true if the previous window is just now appearing.
+
+Returns bool
+bool UI::TreeNode(const string&in text, int flags = UI::TreeNodeFlags::None)
+Node in a tree list. Returns true if opened.
+
+Returns bool
+void UI::TreePop()
+End of the previously tree node. Must only be called if TreeNode() returned true.
+
+void UI::TreeAdvanceToLabelPos()
+Advance the cursor position to the normal label position for tree nodes.
+
+bool UI::CollapsingHeader(const string&in label)
+Collapsable header. Returns true if open.
+
+Returns bool
+void UI::Columns(int count, const string&in id = "", bool border = true)
+Begins a table layout. Call this with count set to 1 to reset to normal.
+
+void UI::NextColumn()
+Goes to the next column.
+
+bool UI::IsItemHovered(int flags = UI::HoveredFlags::None)
+Returns true if the mouse is hovering the previous control.
+
+Returns bool
+bool UI::IsItemActive()
+Returns true if the previous control is active.
+
+Returns bool
+bool UI::IsItemFocused()
+Returns true if the previous control is focused.
+
+Returns bool
+bool UI::IsItemClicked()
+Returns true if the previous control is clicked.
+
+Returns bool
+bool UI::IsItemDeactivated()
+Returns true if the previous control is deactivated.
+
+Returns bool
+vec4 UI::GetItemRect()
+Returns the rectangle of the previous control in screen space.
+
+Returns vec4
+vec2 UI::CalcItemSize(const vec2&in size, float w, float h)
+Calculate full item size given user provided 'size' parameter and default width/height. Default width is often == CalcItemWidth().
+
+Returns vec2
+bool UI::IsKeyPressed(Key key)
+Returns true if the given key was pressed.
+
+Returns bool
+bool UI::IsMouseDown(MouseButton button = UI::MouseButton::Left)
+Returns true if the given mouse button is down.
+
+Returns bool
+bool UI::IsMouseClicked(MouseButton button = UI::MouseButton::Left, bool repeat = false)
+Returns true if the given mouse button was just clicked.
+
+Returns bool
+bool UI::IsMouseReleased(MouseButton button = UI::MouseButton::Left)
+Returns true if the given mouse button was just released.
+
+Returns bool
+bool UI::IsMouseDoubleClicked(MouseButton button = UI::MouseButton::Left)
+Returns true if the given mouse button was just double clicked.
+
+Returns bool
+bool UI::IsMouseDragging(MouseButton button = UI::MouseButton::Left, float lock_threshold = - 1)
+Returns true if the mouse is dragging.
+
+Returns bool
+vec2 UI::GetMouseDragDelta(MouseButton button = UI::MouseButton::Left, float lock_threshold = - 1)
+Returns the delta from the initial clicking position while the mouse button is pressed or was just released. This is locked and will return 0.0f until the mouse moves past a distance threshold at least once.
+
+Returns vec2
+void UI::BeginTooltip()
+Begins a tooltip dialog.
+
+void UI::EndTooltip()
+Ends a tooltip dialog.
+
+void UI::OpenPopup(const string&in id)
+Opens a popup with the given ID. Must be within the same scope of ID's.
+
+void UI::CloseCurrentPopup()
+Closes the current popup.
+
+bool UI::BeginPopup(const string&in id, int flags = UI::WindowFlags::None)
+Begins a popup.
+
+Returns bool
+bool UI::BeginPopupContextItem(const string&in id)
+Begins a popup context item.
+
+Returns bool
+bool UI::BeginPopupModal(const string&in id, int flags = UI::WindowFlags::None)
+Begins a modal popup.
+
+Returns bool
+bool UI::BeginPopupModal(const string&in id, bool&out open, int flags = UI::WindowFlags::None)
+Begins a modal popup.
+
+Returns bool
+void UI::EndPopup()
+Ends a popup.
+
+bool UI::BeginCombo(const string&in label, const string&in current, int flags = UI::ComboFlags::None)
+Begins a combo box.
+
+Returns bool
+bool UI::Selectable(const string&in label, bool selected, int flags = UI::SelectableFlags::None)
+Represents a selectable item. Could be inside of a combo box.
+
+Returns bool
+void UI::SetItemDefaultFocus()
+Puts default focus on the last added item.
+
+void UI::EndCombo()
+Ends a combo box.
+
+string UI::InputText(const string&in label, string str, int flags = UI::InputTextFlags::None, InputTextCallback@ callback = null)
+Input text. Returns the new value.
+
+Returns string
+string UI::InputText(const string&in label, string str, bool&out changed, int flags = UI::InputTextFlags::None, InputTextCallback@ callback = null)
+Input text. Returns the new value as well as the changed boolean.
+
+Returns string
+string UI::InputTextMultiline(const string&in label, string str, const vec2&in size = vec2 ( 0 , 0 ), InputTextFlags flags = UI::InputTextFlags::None, InputTextCallback@ callback = null)
+Input text in a multiline box. Returns the new value.
+
+Returns string
+string UI::InputTextMultiline(const string&in label, string str, bool&out changed, const vec2&in size = vec2 ( 0 , 0 ), InputTextFlags flags = UI::InputTextFlags::None, InputTextCallback@ callback = null)
+Input text in a multiline box. Returns the new value as well as the changed boolean.
+
+Returns string
+void UI::SetKeyboardFocusHere(int offset = 0)
+Sets the keyboard focus on the next widget. Use positive offsets to access sub components of a multiple component widget. Use -1 to access previous widget.
+
+int UI::InputInt(const string&in label, int num, int step = 1)
+Input integer. Returns the new value.
+
+Returns int
+float UI::InputFloat(const string&in label, float num, float step = 1.0f)
+Input float. Returns the new value.
+
+Returns float
+vec2 UI::InputFloat2(const string&in label, const vec2&in v)
+Input vec2. Returns the new value.
+
+Returns vec2
+vec3 UI::InputFloat3(const string&in label, const vec3&in v)
+Input vec3. Returns the new value.
+
+Returns vec3
+vec4 UI::InputFloat4(const string&in label, const vec4&in v)
+Input vec4. Returns the new value.
+
+Returns vec4
+int UI::SliderInt(const string&in label, int num, int min, int max, const string&in format = "%d")
+Slider for integers. Returns the new value.
+
+Returns int
+float UI::SliderFloat(const string&in label, float num, float min, float max, const string&in format = "%.3f")
+Slider for floats. Returns the new value.
+
+Returns float
+vec2 UI::SliderFloat2(const string&in label, const vec2&in v, float min, float max, const string&in format = "%.3f")
+Slider for vec2. Returns the new value.
+
+Returns vec2
+vec3 UI::SliderFloat3(const string&in label, const vec3&in v, float min, float max, const string&in format = "%.3f")
+Slider for vec3. Returns the new value.
+
+Returns vec3
+vec4 UI::SliderFloat4(const string&in label, const vec4&in v, float min, float max, const string&in format = "%.3f")
+Slider for vec4. Returns the new value.
+
+Returns vec4
+double UI::SliderDouble(const string&in label, double num, double min, double max, const string&in format = "%.3f")
+Slider for doubles. Returns the new value.
+
+Returns double
+int UI::VSliderInt(const string&in label, const vec2&in size, int num, int min, int max, const string&in format = "%d")
+Vertical slider for integers. Returns the new value.
+
+Returns int
+float UI::VSliderFloat(const string&in label, const vec2&in size, float num, float min, float max, const string&in format = "%.3f")
+Vertical slider for floats. Returns the new value.
+
+Returns float
+double UI::VSliderDouble(const string&in label, const vec2&in size, double num, double min, double max, const string&in format = "%.3f")
+Vertical slider for doubles. Returns the new value.
+
+Returns double
+vec3 UI::InputColor3(const string&in label, const vec3&in color)
+Input color. Returns the new value.
+
+Returns vec3
+vec4 UI::InputColor4(const string&in label, const vec4&in color)
+Input color. Returns the new value.
+
+Returns vec4
+void UI::Image(Texture@ texture)
+An image.
+
+void UI::Image(Texture@ texture, const vec2&in size)
+An image scaled to a specific size.
+
+bool UI::BeginChild(const string&in id, const vec2&in size = vec2 ( ), bool border = false, int flags = UI::WindowFlags::None)
+Begins a self-contained indepedendent scrolling container.
+
+Returns bool
+void UI::EndChild()
+Ends a child container. Must always be called even if BeginChild returns false!
+
+void UI::BeginTabBar(const string&in id, int flags = UI::TabBarFlags::None)
+Begins a multi-tab container.
+
+bool UI::BeginTabItem(const string&in label, int flags = UI::TabItemFlags::None)
+Begins a tab item within a multi-tab container.
+
+Returns bool
+bool UI::BeginTabItem(const string&in label, bool&out open, int flags = UI::TabItemFlags::None)
+Begins a tab item within a multi-tab container.
+
+Returns bool
+void UI::EndTabItem()
+Ends a tab item within a multi-tab container.
+
+void UI::EndTabBar()
+Ends a multi-tab container.
+
+bool UI::BeginTable(const string&in id, int columns, int flags = UI::TableFlags::None, const vec2&in outer_size = vec2 ( ), float inner_width = 0.0f)
+Begins a table. Only call EndTable() if BeginTable() returns true.
+
+Returns bool
+void UI::EndTable()
+Ends a table.
+
+void UI::TableNextRow(int flags = UI::TableRowFlags::None, float min_height = 0.0f)
+Append into the first cell of a new row in a table.
+
+bool UI::TableNextColumn()
+Append into the next column (or first column of new row) of a table. Returns true if visible.
+
+Returns bool
+bool UI::TableSetColumnIndex(int index)
+Append into a specified column of a table. Returns true if visible.
+
+Returns bool
+void UI::TableSetupColumn(const string&in label, int flags = UI::TableColumnFlags::None, float init_width_or_weight = 0.0f, uint user_id = 0)
+Sets up a column within a table with a label, flags, and initial size.
+
+void UI::TableSetupScrollFreeze(int cols, int rows)
+Lock columns and rows in a table so they stay visible when scrolled.
+
+void UI::TableHeadersRow()
+Submit all table header cells based on data provided to TableSetupColumn.
+
+void UI::TableHeader(const string&in label)
+Submit one header cell manually. (Prefer TableHeadersRow!)
+
+TableSortSpecs@ UI::TableGetSortSpecs()
+Get latest sort specs for the table. Returns null when not sorting.
+
+Returns UI::TableSortSpecs@
+int UI::TableGetColumnCount()
+Returns number of columns (value passed to BeginTable).
+
+Returns int
+int UI::TableGetColumnIndex()
+Returns current column index.
+
+Returns int
+int UI::TableGetRowIndex()
+Returns current row index.
+
+Returns int
+string UI::TableGetColumnName(int column_n = - 1)
+Returns an empty string if column didn't have a name declared by TableSetupColumn(). Pass -1 to use current column.
+
+Returns string
+TableColumnFlags UI::TableGetColumnFlags(int column_n = - 1)
+Returns column flags so you can query their Enabled/Visible/Sorted/Hovered status flags. Pass -1 to use current column.
+
+Returns UI::TableColumnFlags
+void UI::TableSetColumnEnabled(int column_n, bool v)
+Change user accessible enabled/disabled state of a column. Set to false to hide the column. User can use the context menu to change this themselves (right-click in headers, or right-click in columns body with UI::TableFlags::ContextMenuInBody)
+
+void UI::TableSetBgColor(TableBgTarget target, const vec4&in color, int column_n = - 1)
+Change the color of a cell, row, or column. See UI::TableBgTarget flags for details.
+
+bool UI::BeginListBox(const string&in id, const vec2&in size = vec2 ( ))
+Begins a listbox. This is essentially a thin wrapper to using BeginChild/EndChild with some stylistic changes.
+
+Returns bool
+void UI::EndListBox()
+Ends a listbox.
+
+void UI::AlignTextToFramePadding()
+Vertically align upcoming text baseline to frame padding so that it will align properly to regularly framed items (call if you have text on a line before a framed item).
+
+float UI::GetTextLineHeight()
+Gets the line height of text. Typically the font size.
+
+Returns float
+float UI::GetTextLineHeightWithSpacing()
+Gets the line height of text plus the distance between 2 consecutive lines of text.
+
+Returns float
+float UI::GetFrameHeight()
+Gets the frame height.
+
+Returns float
+float UI::GetFrameHeightWithSpacing()
+Gets the frame height plus the distance in pixels between 2 consecutive lines of framed widgets.
+
+Returns float
+vec2 UI::GetCursorPos()
+Gets the current position of the UI cursor.
+
+Returns vec2
+void UI::SetCursorPos(const vec2&in pos)
+Sets the current position of the UI cursor.
+
+vec2 UI::GetWindowPos()
+Gets the current position of the UI window.
+
+Returns vec2
+void UI::SetWindowPos(const vec2&in size, Cond cond = UI::Cond::None)
+Sets the current position of the UI window.
+
+vec2 UI::GetWindowSize()
+Gets the current size of the UI window.
+
+Returns vec2
+void UI::SetWindowSize(const vec2&in size, Cond cond = UI::Cond::None)
+Sets the current size of the UI window.
+
+bool UI::IsWindowFocused(int flags = UI::FocusedFlags::None)
+Is the current window focused? Or its root/child, depending on flags.
+
+Returns bool
+void UI::SetMouseCursor(MouseCursor cursor)
+Set the cursor shape of the mouse.
+
+vec2 UI::GetContentRegionAvail()
+Gets the currently available size in the window.
+
+Returns vec2
+vec2 UI::GetContentRegionMax()
+Gets the current content boundaries.
+
+Returns vec2
+vec2 UI::GetWindowContentRegionMin()
+Gets the content boundaries minimum.
+
+Returns vec2
+vec2 UI::GetWindowContentRegionMax()
+Gets the content boundaries maximum.
+
+Returns vec2
+float UI::GetWindowContentRegionWidth()
+Gets the content width.
+
+Returns float
+void UI::NodTree(CMwNod@ nod, NodTreeMemberCallback@ memberCallback = null)
+A tree of nods, much like Nod Explorer.
+
+float UI::GetScale()
+Returns the current scale of the UI. This can be set by the user in the Openplanet settings. You might need this if you are working with numbers that represent pixels and want to support high UI scales.
+
+Returns float
+bool UI::IsOverlayShown()
+Returns true if the overlay is currently visible.
+
+Returns bool
+void UI::ShowOverlay()
+Shows the overlay.
+
+void UI::HideOverlay()
+Hides the overlay.
+
+bool UI::IsGameUIVisible()
+Returns true if the game UI is currently visible, or false if it was hidden. By default, the button for this is asterisk on the numpad. Note that this also returns true if the player is not currently in game.
+
+Returns bool
+bool UI::IsRendering()
+Returns true if Openplanet's overlay is rendering at all. For example, this can return false if the global option "Hide overlay on hidden game UI" is enabled.
+
+Returns bool
+string UI::CurrentActionMap()
+Returns the name of the currently active action map in the game.
+
+Returns string
+bool UI::IsDockingEnabled()
+Returns true if docking is enabled in the Openplanet settings.
+
+Returns bool
+void UI::ShowNotification(const string&in text, int time = 5000)
+Shows a notification in the overlay.
+
+void UI::ShowNotification(const string&in header, const string&in text, int time = 5000)
+Shows a notification in the overlay with an additional header.
+
+void UI::ShowNotification(const string&in header, const string&in text, const vec4&in colBackground, int time = 5000)
+Shows a notification in the overlay with an additional header and background color.
+
+vec2 UI::GetMousePos()
+Get the current position of the mouse relative to the top-left corner of the window.
+
+Returns vec2
+vec4 UI::HSV(float h, float s, float v)
+Converts normalized HSV values into normalized RGB values.
+
+Returns vec4
+vec3 UI::ToHSV(float r, float g, float b)
+Converts normalized RGB values into normalized HSV values.
+
+Returns vec3
+void UI::Markdown(const string&in str)
+Renders a block of text with Markdown formatting.
+
+DrawList@ UI::GetBackgroundDrawList()
+Get background draw list. (Note: You might want to prefer using the Nvg API!)
+
+Returns UI::DrawList@
+DrawList@ UI::GetForegroundDrawList()
+Get foreground draw list.
+
+Returns UI::DrawList@
+DrawList@ UI::GetWindowDrawList()
+Get draw list associated to the current UI window. (Do not keep this handle around outside of windows this was called from!)
+
+Returns UI::DrawList@
+enum UI::InputBlocking
+How to handle inputs going forward.
+
+enum UI::WindowFlags
+Window flags that can be passed to UI::Begin().
+
+enum UI::ButtonFlags
+Button flags that can be passed to UI::InvisibleButton().
+
+enum UI::Col
+Color variables that can be passed to UI::PushStyleColor().
+
+enum UI::StyleVar
+Style variables that can be passed to UI::PushStyleVar().
+
+enum UI::FocusedFlags
+Flags for UI::IsWindowFocused().
+
+enum UI::ComboFlags
+Combo flags that can be passed to UI::BeginCombo().
+
+enum UI::SelectableFlags
+Selectable flags that can be passed to UI::Selectable().
+
+enum UI::TreeNodeFlags
+Flags that can be passed to UI::TreeNode().
+
+enum UI::InputTextFlags
+Flags that can be passed to UI::InputText().
+
+enum UI::TableFlags
+Flags that can be passed to UI::BeginTable().
+
+enum UI::TableRowFlags
+Flags that can be passed to UI::TableNextRow().
+
+enum UI::TableColumnFlags
+Flags that can be passed to UI::TableSetupColumn().
+
+enum UI::TableBgTarget
+Background colors are rendering in 3 layers: Layer 0: draw with RowBg0 color if set, otherwise draw with ColumnBg0 if set. Layer 1: draw with RowBg1 color if set, otherwise draw with ColumnBg1 if set. Layer 2: draw with CellBg color if set. The purpose of the two row/columns layers is to let you decide if a background color changes should override or blend with the existing color. When using UI::TableFlags::RowBg on the table, each row has the RowBg0 color automatically set for odd/even rows. If you set the color of RowBg0 target, your color will override the existing RowBg0 color. If you set the color of RowBg1 or ColumnBg1 target, your color will blend over the RowBg0 color.
+
+enum UI::TabBarFlags
+Flags that can be passed to UI::BeginTab().
+
+enum UI::TabItemFlags
+Flags that can be passed to UI::BeginTabItem().
+
+enum UI::SortDirection
+enum UI::Cond
+Conditions for certain UI set operations.
+
+enum UI::Key
+UI-specific keys.
+
+enum UI::MouseButton
+UI-specific mouse buttons.
+
+enum UI::HoveredFlags
+Flags that can be passed to IsItemHovered.
+
+enum UI::MouseCursor
+Cursors that can be passed to SetMouseCursor.
+
+(funcdef) void UI::NodTreeMemberCallback(CMwNod@ nod, Reflection::MwMemberInfo@ info)
+Callback function for UI::NodTree.
+
+(funcdef) void UI::InputTextCallback(InputTextCallbackData@ data)
+Callback function for UI::InputText.
+

@@ -1,0 +1,188 @@
+Permissions
+Namespace
+Trackmania permission checks.
+
+bool Permissions::DisplayClubAds()
+User can see ads about club edition
+
+Returns bool
+bool Permissions::DisplayStandardAds()
+User can see ads about standard edition
+
+Returns bool
+bool Permissions::CanRemoveAds()
+User can remove ads
+
+Returns bool
+bool Permissions::CreateItemAndMod()
+User can create items and mods
+
+Returns bool
+bool Permissions::CreateLocalMap()
+User can create a map locally
+
+Returns bool
+bool Permissions::CreateLocalReplay()
+User can save a video in the replay editor
+
+Returns bool
+bool Permissions::CreateLocalSkin()
+User can create a skin locally
+
+Returns bool
+bool Permissions::PlayRecords()
+User can play against map's records
+
+Returns bool
+bool Permissions::ViewRecords()
+User can view the map's records
+
+Returns bool
+bool Permissions::ViewPBGhostMultiplayer()
+User can view their PB ghost when playing in multiplayer modes
+
+Returns bool
+bool Permissions::InGameChat()
+User can chat ingame
+
+Returns bool
+bool Permissions::OpenAdvancedMapEditor()
+User can open the advanced map editor
+
+Returns bool
+bool Permissions::OpenReplayEditor()
+User can open the replay editor
+
+Returns bool
+bool Permissions::OpenSimpleMapEditor()
+User can open the simple map editor
+
+Returns bool
+bool Permissions::OpenSkinEditor()
+User can open the skin editor
+
+Returns bool
+bool Permissions::PlayAgainstReplay()
+User can play against a replay
+
+Returns bool
+bool Permissions::PlayArcadeChannel()
+User can play on the arcade channel
+
+Returns bool
+bool Permissions::PlayCurrentOfficialMonthlyCampaign()
+User can play the current official monthly campaign
+
+Returns bool
+bool Permissions::PlayCurrentOfficialQuarterlyCampaign()
+User can play the current official quarterly campaign
+
+Returns bool
+bool Permissions::PlayHotSeat()
+User can play the HotSeat mode
+
+Returns bool
+bool Permissions::PlayLocalMap()
+User can play a local map
+
+Returns bool
+bool Permissions::PlayMatchmaking()
+User can play matchmaking
+
+Returns bool
+bool Permissions::PlayOnlineCompetition()
+User can play online competitions
+
+Returns bool
+bool Permissions::PlayPastOfficialMonthlyCampaign()
+User can play the past official monthly campaigns
+
+Returns bool
+bool Permissions::PlayPastOfficialQuarterlyCampaign()
+User can play the past official quarterly campaigns
+
+Returns bool
+bool Permissions::PlayPublicClubCampaign()
+User can play public club campaigns
+
+Returns bool
+bool Permissions::PlayPublicClubRoom()
+User can play on the public club rooms
+
+Returns bool
+bool Permissions::PlaySplitscreen()
+User can play the splitscreen mode
+
+Returns bool
+bool Permissions::PlayTOTDChannel()
+User can play the TOTD channel and COTD
+
+Returns bool
+bool Permissions::CreateClub()
+User can create a club
+
+Returns bool
+bool Permissions::CreateActivity()
+User can create a club activity
+
+Returns bool
+bool Permissions::CreateClubCompetition()
+User can create a competition in a club
+
+Returns bool
+bool Permissions::ViewClub()
+User can display a club page
+
+Returns bool
+bool Permissions::JoinClub()
+User can join a club
+
+Returns bool
+bool Permissions::PlayPrivateActivity()
+User can play a private club activity
+
+Returns bool
+bool Permissions::UseCustomCollection()
+User can use a custom item collection
+
+Returns bool
+bool Permissions::AccessServerReview()
+User can access the server review
+
+Returns bool
+bool Permissions::CreateAndUploadMap()
+User can upload a map to server review
+
+Returns bool
+bool Permissions::CreateGameMode()
+User can create game modes
+
+Returns bool
+bool Permissions::CreateLocalServer()
+User can create a local server
+
+Returns bool
+bool Permissions::FindLocalServer()
+User can find a local server
+
+Returns bool
+bool Permissions::CreateAndUploadSkin()
+User can save a skin (upload)
+
+Returns bool
+bool Permissions::UseCustomSkin()
+User can use a custom skin
+
+Returns bool
+bool Permissions::CanSubscribeToClub()
+User can upgrade its game to the club edition
+
+Returns bool
+bool Permissions::CanSubscribeToStandard()
+User can upgrade its game to the standard edition
+
+Returns bool
+bool Permissions::GainXP()
+User can play gain experience points
+
+Returns bool

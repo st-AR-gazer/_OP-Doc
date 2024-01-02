@@ -1,0 +1,16 @@
+Reflection::MwMemberInfo
+Class
+Information about a type's member.
+
+Properties
+uint ID
+uint16 Offset
+Methods
+const string get_Name() const
+Property
+obj.Name
+Returns string
+const string get_NameDescriptive() const
+Property
+obj.NameDescriptive
+Returns string

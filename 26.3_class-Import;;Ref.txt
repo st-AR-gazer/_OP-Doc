@@ -1,0 +1,9 @@
+Import::Ref
+Class
+A reference to a script variable.
+
+Behaviors
+Import::Ref@ Ref(const string&in name)
+Returns Import::Ref@
+Import::Ref@ Ref(?&in obj, const string&in name)
+Returns Import::Ref@

@@ -1,0 +1,9 @@
+Discord::User
+Class
+Information about a user.
+
+Properties
+string ID
+string Name
+string Discriminator
+string Avatar

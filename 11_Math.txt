@@ -1,0 +1,110 @@
+Math
+Namespace
+Math functions and structures.
+
+int Math::Abs(int i)
+Returns int
+float Math::Abs(float f)
+Returns float
+float Math::Sin(float f)
+Returns float
+float Math::Asin(float f)
+Returns float
+float Math::Cos(float f)
+Returns float
+float Math::Acos(float f)
+Returns float
+float Math::Tan(float f)
+Returns float
+float Math::Atan(float f)
+Returns float
+float Math::Atan2(float y, float x)
+Returns float
+float Math::Exp(float f)
+Returns float
+float Math::Pow(float x, float y)
+Returns float
+float Math::Sqrt(float f)
+Returns float
+float Math::ToDeg(float rad)
+Returns float
+float Math::ToRad(float deg)
+Returns float
+float Math::Rand(float min, float max)
+Generate a random floating point value between min (inclusive) and max (exclusive).
+
+Returns float
+int Math::Rand(int min, int max)
+Generate a random integer between min (inclusive) and max (exclusive).
+
+Returns int
+float Math::Log(float f)
+Returns float
+float Math::Log2(float f)
+Returns float
+float Math::Log10(float f)
+Returns float
+float Math::Log1p(float f)
+Returns float
+float Math::Logb(float f)
+Returns float
+float Math::Floor(float f)
+Returns float
+float Math::Ceil(float f)
+Returns float
+float Math::Round(float f)
+Returns float
+float Math::InvLerp(const float&in min, const float&in max, const float&in value)
+Returns float
+float Math::InvLerp(const int&in min, const int&in max, const int&in value)
+Returns float
+float Math::Lerp(const float&in min, const float&in max, float x)
+Returns float
+vec2 Math::Lerp(const vec2&in min, const vec2&in max, float x)
+Returns vec2
+vec3 Math::Lerp(const vec3&in min, const vec3&in max, float x)
+Returns vec3
+vec4 Math::Lerp(const vec4&in min, const vec4&in max, float x)
+Returns vec4
+float Math::Distance2(const vec2&in a, const vec2&in b)
+Returns float
+float Math::Distance2(const vec3&in a, const vec3&in b)
+Returns float
+float Math::Distance(const vec2&in a, const vec2&in b)
+Returns float
+float Math::Distance(const vec3&in a, const vec3&in b)
+Returns float
+float Math::Dot(const vec2&in a, const vec2&in b)
+Returns float
+float Math::Dot(const vec3&in a, const vec3&in b)
+Returns float
+float Math::Angle(const vec2&in a, const vec2&in b)
+Returns float
+float Math::Angle(const vec3&in a, const vec3&in b)
+Returns float
+vec3 Math::Cross(const vec3&in a, const vec3&in b)
+Returns vec3
+int Math::Min(int x, int y)
+Returns int
+float Math::Min(float x, float y)
+Returns float
+int Math::Max(int x, int y)
+Returns int
+float Math::Max(float x, float y)
+Returns float
+int Math::Clamp(int x, int min, int max)
+Returns int
+float Math::Clamp(float x, float min, float max)
+Returns float
+bool Math::IsNaN(float)
+Returns bool
+bool Math::IsInf(float)
+Returns bool
+uint16 Math::SwapBytes(uint16)
+Returns uint16
+uint Math::SwapBytes(uint)
+Returns uint
+uint64 Math::SwapBytes(uint64)
+Returns uint64
+quat Math::Slerp(const quat&in a, const quat&in b, float x)
+Returns quat

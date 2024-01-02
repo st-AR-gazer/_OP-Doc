@@ -1,0 +1,20 @@
+Import
+Namespace
+Loading external functions from DLL's.
+
+class Import::Library
+A library representing a DLL. Instances of Library exist in between multiple plugins, and have to be loaded using Import::GetLibrary. When all instances of Library are destroyed, the dll is freed and unloaded.
+
+class Import::Function
+An imported symbol from a library.
+
+class Import::Ref
+A reference to a script variable.
+
+Library@ Import::GetLibrary(const string&in path)
+Gets a library. If it's already loaded, this will return a handle to the already loaded library.
+
+Returns Import::Library@
+enum Import::CallConvention
+The calling convention to use for this call on 32 bit builds. Convention options don't matter on 64 bit builds.
+

@@ -1,0 +1,69 @@
+Json::Value
+Class
+A value in a Json tree. Can be an array, object, or any other value.
+
+Behaviors
+Json::Value@ Value()
+Returns Json::Value@
+Json::Value@ Value(const ?&in)
+Returns Json::Value@
+Methods
+Json::Type GetType() const
+Returns Json::Type
+Json::Value@ opIndex(const string&in)
+Operator
+obj[x]
+Returns Json::Value@
+const Json::Value@ opIndex(const string&in) const
+Operator
+obj[x]
+Returns const Json::Value@
+Json::Value@ opIndex(int)
+Operator
+obj[x]
+Returns Json::Value@
+const Json::Value@ opIndex(int) const
+Operator
+obj[x]
+Returns const Json::Value@
+string opImplConv() const
+Operator
+string x = obj
+Returns string
+int opImplConv() const
+Operator
+int x = obj
+Returns int
+float opImplConv() const
+Operator
+float x = obj
+Returns float
+double opImplConv() const
+Operator
+double x = obj
+Returns double
+bool opImplConv() const
+Operator
+bool x = obj
+Returns bool
+uint get_Length() const
+Property
+obj.Length
+Returns uint
+Json::Value@ opAssign(const Json::Value&in)
+Operator
+obj = x
+Returns Json::Value@
+void Add(Json::Value@)
+Json::Value@ Get(const string&in key)
+Returns Json::Value@
+const Json::Value@ Get(const string&in key) const
+Returns const Json::Value@
+const Json::Value@ Get(const string&in key, const Json::Value&in def) const
+Returns const Json::Value@
+bool HasKey(const string&in key) const
+Returns bool
+void Remove(int index)
+void Remove(const string&in key)
+string[]@ GetKeys() const
+Returns string[]@

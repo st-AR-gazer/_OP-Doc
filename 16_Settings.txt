@@ -1,0 +1,7 @@
+Settings
+Namespace
+Openplanet's settings.
+
+class Settings::Section
+Represents a section in the settings file.
+

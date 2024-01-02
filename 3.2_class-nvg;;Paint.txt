@@ -1,0 +1,13 @@
+nvg::Paint
+Class
+A paint style that can be used as a fill or a stroke.
+
+Behaviors
+~Paint()
+Paint()
+Paint(const nvg::Paint&in)
+Methods
+nvg::Paint& opAssign(const nvg::Paint&in)
+Operator
+obj = x
+Returns nvg::Paint

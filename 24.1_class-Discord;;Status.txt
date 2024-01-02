@@ -1,0 +1,23 @@
+Discord::Status
+Class
+A Discord status update.
+
+Properties
+string State
+string Details
+int64 StartTimestamp
+int64 EndTimestamp
+string LargeImageKey
+string LargeImageText
+string SmallImageKey
+string SmallImageText
+string PartyId
+int PartySize
+int PartyMax
+string MatchSecret
+string JoinSecret
+string SpectateSecret
+Behaviors
+~Status()
+Status()
+Status(const Discord::Status&in)

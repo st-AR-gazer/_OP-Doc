@@ -1,0 +1,30 @@
+Reflection::MwClassInfo
+Class
+Information about a type.
+
+Properties
+uint ID
+const Reflection::MwClassInfo@ BaseType
+Methods
+const Reflection::MwMemberInfo@[]@ get_Members() const
+Property
+obj.Members
+Returns const Reflection::MwMemberInfo@[]@
+const string get_Name() const
+Property
+obj.Name
+Returns string
+const string get_Description() const
+Property
+obj.Description
+Returns string
+const string get_UserName() const
+Property
+obj.UserName
+Returns string
+const string get_FileExtension() const
+Property
+obj.FileExtension
+Returns string
+const Reflection::MwMemberInfo@ GetMember(const string&in name) const
+Returns const Reflection::MwMemberInfo@

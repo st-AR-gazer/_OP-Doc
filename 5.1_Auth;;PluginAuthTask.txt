@@ -1,0 +1,13 @@
+Auth::PluginAuthTask
+Class
+An asynchronous authentication task with the Openplanet and Nadeo backends for the current plugin.
+
+Methods
+bool Finished()
+Returns true if the task has finished execution. This will return true even in the case of an error. Only when this returns true should you call Token() to get the actual token.
+
+Returns bool
+string Token()
+Returns the authentication token as a string. This is the token you should send to your server, which should validate it using the Openplanet.dev API. Note that the token is only valid for 5 minutes. Because of this, you should not be storing this token! Instead, exchange it with a token of your own from your backend which you keep validated for a longer period of time.
+
+Returns string

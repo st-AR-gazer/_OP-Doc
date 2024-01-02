@@ -1,0 +1,33 @@
+Regex
+Namespace
+Regular expressions.
+
+class Regex::SearchAllResult
+Result of a call to Regex::SearchAll.
+
+string Regex::Replace(const string&in source, const string&in pattern, const string&in replace, int flags = Regex::Flags::ECMAScript)
+Perform a regex search and replace on the given string.
+
+Returns string
+bool Regex::IsMatch(const string&in source, const string&in pattern, int flags = Regex::Flags::ECMAScript)
+Perform a regex match on the source string and returns true if it matches.
+
+Returns bool
+bool Regex::Contains(const string&in source, const string&in pattern, int flags = Regex::Flags::ECMAScript)
+Perform a regex match on the source string and returns true if it contains the pattern.
+
+Returns bool
+string[]@ Regex::Match(const string&in source, const string&in pattern, int flags = Regex::Flags::ECMAScript)
+Performs a regex match on the source string and returns the matched groups if it matches, or an empty array if it doesn't.
+
+Returns string[]@
+string[]@ Regex::Search(const string&in source, const string&in pattern, int flags = Regex::Flags::ECMAScript)
+Searches for a regex match on the source string and returns the matched groups if it matches, or an empty array if it doesn't.
+
+Returns string[]@
+SearchAllResult@ Regex::SearchAll(const string&in source, const string&in pattern, int flags = Regex::Flags::ECMAScript)
+Searches for a regex match on the source string and returns all the matches.
+
+Returns Regex::SearchAllResult@
+enum Regex::Flags
+Flags that can be passed to regular expression functions.

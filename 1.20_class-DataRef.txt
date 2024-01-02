@@ -1,0 +1,6 @@
+DataRef
+Class
+The data reference type used in Maniaplanet.
+
+Properties
+wstring Filename

@@ -1,0 +1,6 @@
+Internal::NadeoServices
+Namespace
+string Internal::NadeoServices::GetAccountID()
+Returns string
+string Internal::NadeoServices::GetCoreToken()
+Returns string

@@ -1,0 +1,84 @@
+Meta
+Namespace
+Openplanet meta plugin API.
+
+class Meta::PluginSetting
+Information about a plugin's setting.
+
+class Meta::Plugin
+Information about an Openplanet plugin.
+
+class Meta::PluginIndex
+An index of plugin information that can be sorted by its dependency tree.
+
+class Meta::PluginIndexItem
+An item in a PluginIndex.
+
+class Meta::PluginCoroutine
+A coroutine for a plugin.
+
+class Meta::UnloadedPluginInfo
+Plugin@ Meta::ExecutingPlugin()
+Gets the currently executing plugin.
+
+Returns Meta::Plugin@
+Plugin@[]@ Meta::AllPlugins()
+Gets all plugins that are loaded.
+
+Returns Meta::Plugin@[]@
+UnloadedPluginInfo[]@ Meta::UnloadedPlugins()
+Gets the identifiers of all unloaded plugins. Note that this function may be slow!
+
+Returns Meta::UnloadedPluginInfo[]@
+Plugin@ Meta::GetPluginFromID(const string&in id)
+Gets a plugin from its ID.
+
+Returns Meta::Plugin@
+Plugin@ Meta::GetPluginFromSiteID(int siteID)
+Gets a plugin from its site ID, if set.
+
+Returns Meta::Plugin@
+Plugin@ Meta::LoadPlugin(const string&in path, PluginSource source, PluginType type)
+Loads a plugin into memory from the given absolute path and returns a handle to the plugin.
+
+Returns Meta::Plugin@
+void Meta::UnloadPlugin(Plugin@ plugin)
+Queues a plugin to be unloaded from memory completely. Note that this will invalidate the plugin object passed in on the next frame! Do not use the Plugin handle after calling this!
+
+void Meta::SaveSettings()
+Forces Openplanet to save its settings immediately. Normally this happens on game shutdown or when the settings window is closed. You should not have to call this function unless you know you really need to!
+
+bool Meta::IsDeveloperMode()
+Returns true if developer mode is currently enabled.
+
+Returns bool
+string Meta::OpenplanetVersion()
+Returns the current version of Openplanet.
+
+Returns string
+string Meta::OpenplanetVersionDate()
+Returns the current date of Openplanet's build.
+
+Returns string
+string Meta::OpenplanetBuildInfo()
+Returns the current build info of Openplanet's build.
+
+Returns string
+void Meta::LoadOverlayStyle(const string&in path)
+void Meta::ReloadOverlayStyle()
+void Meta::ResetOverlayStyle()
+void Meta::Terminate()
+Immediately terminates the game process. This is the same as clicking "Exit" in the Openplanet menu.
+
+enum Meta::PluginType
+The type of plugin.
+
+enum Meta::PluginSource
+Where this plugin is loaded from.
+
+enum Meta::PluginSettingType
+The type of this setting variable.
+
+enum Meta::RunContext
+Execution context for a coroutine.
+

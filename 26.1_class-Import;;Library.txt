@@ -1,0 +1,11 @@
+Import::Library
+Class
+A library representing a DLL. Instances of Library exist in between multiple plugins, and have to be loaded using Import::GetLibrary. When all instances of Library are destroyed, the dll is freed and unloaded.
+
+Methods
+string GetPath() const
+Returns string
+Import::Function@ GetFunction(const string&in symbol)
+Gets a function exported from the library. The symbol must be matching exactly what is being exported. In the case of C++ code, this could be a mangled name too!
+
+Returns Import::Function@

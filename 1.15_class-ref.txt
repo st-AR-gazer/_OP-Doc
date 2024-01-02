@@ -1,0 +1,23 @@
+ref
+Class
+Behaviors
+~ref()
+ref()
+ref(const ref&in)
+ref(const ?&in)
+Methods
+void opCast(?&out)
+Operator
+cast<void>(obj)
+ref& opHndlAssign(const ref&in)
+Returns ref
+ref& opHndlAssign(const ?&in)
+Returns ref
+bool opEquals(const ref&in) const
+Operator
+obj == x, obj != x
+Returns bool
+bool opEquals(const ?&in) const
+Operator
+obj == x, obj != x
+Returns bool

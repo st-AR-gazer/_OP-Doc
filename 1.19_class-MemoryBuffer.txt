@@ -1,0 +1,63 @@
+MemoryBuffer
+Class
+A buffer of memory. Can be used in IO or Import calls. You can write to this or read from it, which moves the cursor within the buffer.
+
+Behaviors
+MemoryBuffer@ MemoryBuffer()
+Returns MemoryBuffer@
+MemoryBuffer@ MemoryBuffer(const MemoryBuffer&in)
+Returns MemoryBuffer@
+MemoryBuffer@ MemoryBuffer(uint64 size)
+Returns MemoryBuffer@
+MemoryBuffer@ MemoryBuffer(uint64 size, uint8 init)
+Returns MemoryBuffer@
+Methods
+MemoryBuffer& opAssign(const MemoryBuffer&in)
+Operator
+obj = x
+Returns MemoryBuffer
+void Resize(uint64 size)
+uint64 GetSize() const
+Returns uint64
+void Seek(uint64 pos, int dir = 0)
+bool AtEnd() const
+Returns bool
+void Write(const uint8&in i)
+void Write(const uint16&in i)
+void Write(const uint&in i)
+void Write(const uint64&in i)
+void Write(const int8&in i)
+void Write(const int16&in i)
+void Write(const int&in i)
+void Write(const int64&in i)
+void Write(const float&in i)
+void Write(const double&in i)
+void Write(const string&in str)
+void WriteFromBuffer(const MemoryBuffer&in buf, uint64 size)
+uint8 ReadUInt8()
+Returns uint8
+uint16 ReadUInt16()
+Returns uint16
+uint ReadUInt32()
+Returns uint
+uint64 ReadUInt64()
+Returns uint64
+int8 ReadInt8()
+Returns int8
+int16 ReadInt16()
+Returns int16
+int ReadInt32()
+Returns int
+int64 ReadInt64()
+Returns int64
+float ReadFloat()
+Returns float
+double ReadDouble()
+Returns double
+string ReadString(uint64 size)
+Returns string
+MemoryBuffer@ ReadBuffer(uint64 size)
+Returns MemoryBuffer@
+void WriteFromBase64(const string&in, bool url = false)
+string ReadToBase64(uint64 size, bool url = false)
+Returns string

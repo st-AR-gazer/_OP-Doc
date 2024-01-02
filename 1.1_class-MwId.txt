@@ -1,0 +1,13 @@
+MwId
+Class
+Properties
+uint Value
+Behaviors
+~MwId()
+MwId()
+MwId(const MwId&in)
+MwId(uint)
+Methods
+string GetName() const
+Returns string
+void SetName(const string&in)

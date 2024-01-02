@@ -1,0 +1,72 @@
+Text
+Namespace
+Text parsing and formatting.
+
+int Text::ParseInt(const string&in str)
+Parses the given string as an integer.
+
+Returns int
+int Text::ParseInt64(const string&in str)
+Parses the given string as a 64 bit integer.
+
+Returns int
+uint Text::ParseUInt(const string&in str)
+Parses the given string as an unsigned integer.
+
+Returns uint
+uint Text::ParseUInt64(const string&in str)
+Parses the given string as a 64 bit unsigned integer.
+
+Returns uint
+float Text::ParseFloat(const string&in str)
+Parses the given string as a float.
+
+Returns float
+double Text::ParseDouble(const string&in str)
+Parses the given string as a double.
+
+Returns double
+vec4 Text::ParseHexColor(string str)
+Parses the given string as a hexadecimal color such as "#FF0000".
+
+Returns vec4
+string Text::Format(const string&in format, int8)
+Returns string
+string Text::Format(const string&in format, int16)
+Returns string
+string Text::Format(const string&in format, int)
+Returns string
+string Text::Format(const string&in format, int64)
+Returns string
+string Text::Format(const string&in format, uint8)
+Returns string
+string Text::Format(const string&in format, uint16)
+Returns string
+string Text::Format(const string&in format, uint)
+Returns string
+string Text::Format(const string&in format, uint64)
+Returns string
+string Text::Format(const string&in format, float)
+Returns string
+string Text::Format(const string&in format, double)
+Returns string
+string Text::FormatPointer(uint64 ptr)
+Formats a pointer to its more representative hexadecimal format, for example: 0x12345678
+
+Returns string
+string Text::FormatGameColor(const vec3&in rgb)
+Formats a color in Maniaplanet-style color formatting, for example: "$f00"
+
+Returns string
+string Text::FormatOpenplanetColor(const vec3&in rgb)
+Formats a color in Openplanet-style UI color formatting, for example: "\$f00"
+
+Returns string
+string Text::EncodeBase64(const string&in, bool url = false)
+Encode a string as a base64 encoded string. Note that if you want to encode binary data, you should probably use MemoryBuffer::ReadToBase64 instead.
+
+Returns string
+string Text::DecodeBase64(const string&in, bool url = false)
+Decode a base64 encoded string to a string. Note that if you want to decode binary data, you should probably use MemoryBuffer::WriteFromBase64 instead.
+
+Returns string

@@ -1,0 +1,11 @@
+Meta::UnloadedPluginInfo
+Class
+Properties
+string Path
+string ID
+Meta::PluginSource Source
+Meta::PluginType Type
+Behaviors
+~UnloadedPluginInfo()
+UnloadedPluginInfo()
+UnloadedPluginInfo(const Meta::UnloadedPluginInfo&in)

@@ -1,0 +1,9 @@
+nvg::Texture
+Class
+Represents a texture for the NanoVG API.
+
+Methods
+vec2 GetSize()
+Gets the size of the texture in pixels.
+
+Returns vec2

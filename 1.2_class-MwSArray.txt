@@ -1,0 +1,26 @@
+MwSArray
+Class
+Base array structure type used in ManiaPlanet. Can not be modified right now.
+
+Behaviors
+~MwSArray()
+MwSArray(int&in)
+Methods
+MwSArray<T>& opAssign(const MwSArray<T>&in)
+Operator
+obj = x
+Returns MwSArray<T>
+T& opIndex(uint index)
+Operator
+obj[x]
+Returns T
+const T& opIndex(uint index) const
+Operator
+obj[x]
+Returns T
+uint Length() const
+Returns uint
+uint get_Length() const
+Property
+obj.Length
+Returns uint

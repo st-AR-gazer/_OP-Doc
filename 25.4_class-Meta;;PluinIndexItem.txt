@@ -1,0 +1,29 @@
+Meta::PluginIndexItem
+Class
+An item in a PluginIndex.
+
+Behaviors
+~PluginIndexItem()
+PluginIndexItem()
+PluginIndexItem(const Meta::PluginIndexItem&in)
+Methods
+Meta::PluginIndexItem& opAssign(const Meta::PluginIndexItem&in)
+Operator
+obj = x
+Returns Meta::PluginIndexItem
+string get_ID()
+Property
+obj.ID
+Returns string
+string get_Path()
+Property
+obj.Path
+Returns string
+Meta::PluginType get_Type()
+Property
+obj.Type
+Returns Meta::PluginType
+Meta::PluginSource get_Source()
+Property
+obj.Source
+Returns Meta::PluginSource

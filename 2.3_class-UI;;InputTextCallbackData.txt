@@ -1,0 +1,27 @@
+UI::InputTextCallbackData
+Class
+Callback data for text input widgets. Do not keep handles of this around!
+
+Properties
+UI::InputTextFlags EventFlag
+UI::InputTextFlags Flags
+uint EventChar
+UI::Key EventKey
+int TextLength
+int CursorPos
+int SelectionStart
+int SelectionEnd
+Methods
+string get_Text()
+Property
+obj.Text
+Returns string
+void set_Text(const string&in text)
+Property
+obj.Text
+void DeleteChars(int pos, int bytes_count)
+void InsertChars(int pos, const string&in text)
+void SelectAll()
+void ClearSelection()
+bool HasSelection()
+Returns bool

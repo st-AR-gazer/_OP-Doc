@@ -1,0 +1,9 @@
+Internal
+Namespace
+Functions for builtin plugin use only.
+
+namespace Internal::NadeoServices
+string Internal::NadeoServices::GetAccountID()
+Returns string
+string Internal::NadeoServices::GetCoreToken()
+Returns string

@@ -1,0 +1,7 @@
+MwFastBufferCat
+Class
+Buffer cat type used in ManiaPlanet.
+
+Behaviors
+~MwFastBufferCat()
+MwFastBufferCat(int&in)

@@ -1,0 +1,52 @@
+Net::HttpRequest
+Class
+Holds the state of an executing HTTP request.
+
+Properties
+Net::HttpMethod Method
+string Url
+string Body
+dictionary@ Headers
+bool Redirect
+Behaviors
+Net::HttpRequest@ HttpRequest()
+Returns Net::HttpRequest@
+Methods
+void Start()
+Starts executing the request. Does nothing if the request has already started.
+
+bool Finished()
+Returns true if the request has finished execution. This will return true even in the case of an error.
+
+Returns bool
+string Error()
+Returns an error message, if there was an error. Otherwise, this returns an empty string. This function is useful in the rare case that ResponseCode() returns 0.
+
+Returns string
+int ResponseCode()
+Returns the HTTP response code, for example 200 or 404.
+
+Returns int
+string ResponseHeader(const string&in key)
+Gets the value of a specific response header. The key is case insensitive.
+
+Returns string
+dictionary@ ResponseHeaders()
+Gets a dictionary of all response headers.
+
+Returns dictionary@
+string String()
+Returns the response body as a string.
+
+Returns string
+Json::Value@ Json()
+Returns the response body as a Json value.
+
+Returns Json::Value@
+MemoryBuffer@ Buffer()
+Returns the response body as a MemoryBuffer.
+
+Returns MemoryBuffer@
+void SaveToFile(const string&in path)
+Saves the response body to a file. The given path should be an absolute path.
+

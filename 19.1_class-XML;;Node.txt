@@ -1,0 +1,45 @@
+XML::Node
+Class
+A node within an XML tree.
+
+Behaviors
+~Node()
+Node()
+Node(const XML::Node&in)
+Methods
+bool opImplConv() const
+Operator
+bool x = obj
+Returns bool
+XML::Node& opAssign(const XML::Node&in)
+Operator
+obj = x
+Returns XML::Node
+string Name() const
+Get the tag name of the node. For example, <abc> will return "abc".
+
+Returns string
+XML::Node FirstChild() const
+Get the first child node within this node.
+
+Returns XML::Node
+XML::Node LastChild() const
+Get the last child node within this node.
+
+Returns XML::Node
+XML::Node Child(const string&in name) const
+Get the child node within this node that matches the tag name. For example, to get the tag <abc>, call Child("abc").
+
+Returns XML::Node
+XML::Node NextSibling() const
+Get the next sibling in the parent of this node. For example, if the node you're calling it on is <abc>, it will return <def> in this tree: <root><abc/><def/></root>
+
+Returns XML::Node
+string Attribute(const string&in name, const string&in def = "") const
+Get an attribute within this node. For example, the node <abc x="y"> has an attribute named "x" with a value "y". If the attribute does not exist, the def parameter is returned.
+
+Returns string
+string Content() const
+Get the content text within this node.
+
+Returns string

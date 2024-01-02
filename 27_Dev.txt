@@ -1,0 +1,166 @@
+Dev
+Namespace
+Advanced memory access.
+
+class Dev::ForceCast
+class Dev::HookInfo
+void Dev::Sleep(uint ms)
+uint64 Dev::BaseAddress()
+Returns uint64
+uint64 Dev::BaseAddressEnd()
+Returns uint64
+uint64 Dev::FindPattern(const string&in pattern)
+Returns uint64
+string Dev::Patch(uint64 ptr, const string&in pattern)
+Returns the original bytes as a backup.
+
+Returns string
+HookInfo@ Dev::Hook(uint64 ptr, int padding, const string&in func, int pushRegisters = 0)
+Hooks directly into game code. This requires manual unhooking in the OnDestroyed callback. The function accepts arbitrarily-ordered parameters named as x86 registers. For example, you could set a parameter CMwNod@ rcx.
+
+Returns Dev::HookInfo@
+void Dev::Unhook(HookInfo@ hook)
+Unhooks a registered hook. You're required to manually call this in the OnDestroyed callback.
+
+void Dev::InterceptProc(const string&in className, const string&in procName, ProcIntercept@ func)
+void Dev::InterceptProc(const string&in className, const string&in procName, ProcInterceptEx@ func)
+void Dev::ResetInterceptProc(const string&in className, const string&in procName)
+void Dev::ResetInterceptProc(const string&in className, const string&in procName, ProcIntercept@ func)
+void Dev::ResetInterceptProc(const string&in className, const string&in procName, ProcInterceptEx@ func)
+uint64 Dev::Allocate(uint size, bool executable = false)
+Returns uint64
+void Dev::Free(uint64 ptr)
+void Dev::DebugBreak()
+string Dev::Read(uint64 ptr, uint64 size)
+Returns string
+int8 Dev::ReadInt8(uint64 ptr)
+Returns int8
+int16 Dev::ReadInt16(uint64 ptr)
+Returns int16
+int Dev::ReadInt32(uint64 ptr)
+Returns int
+int64 Dev::ReadInt64(uint64 ptr)
+Returns int64
+uint8 Dev::ReadUInt8(uint64 ptr)
+Returns uint8
+uint16 Dev::ReadUInt16(uint64 ptr)
+Returns uint16
+uint Dev::ReadUInt32(uint64 ptr)
+Returns uint
+uint64 Dev::ReadUInt64(uint64 ptr)
+Returns uint64
+float Dev::ReadFloat(uint64 ptr)
+Returns float
+double Dev::ReadDouble(uint64 ptr)
+Returns double
+vec2 Dev::ReadVec2(uint64 ptr)
+Returns vec2
+vec3 Dev::ReadVec3(uint64 ptr)
+Returns vec3
+vec4 Dev::ReadVec4(uint64 ptr)
+Returns vec4
+int2 Dev::ReadInt2(uint64 ptr)
+Returns int2
+int3 Dev::ReadInt3(uint64 ptr)
+Returns int3
+nat2 Dev::ReadNat2(uint64 ptr)
+Returns nat2
+nat3 Dev::ReadNat3(uint64 ptr)
+Returns nat3
+iso3 Dev::ReadIso3(uint64 ptr)
+Returns iso3
+iso4 Dev::ReadIso4(uint64 ptr)
+Returns iso4
+string Dev::ReadCString(uint64 ptr, uint length)
+Returns string
+string Dev::ReadCString(uint64 ptr)
+Returns string
+void Dev::Write(uint64 ptr, const string&in pattern)
+void Dev::Write(uint64 ptr, int8 i)
+void Dev::Write(uint64 ptr, int16 i)
+void Dev::Write(uint64 ptr, int i)
+void Dev::Write(uint64 ptr, int64 i)
+void Dev::Write(uint64 ptr, uint8 i)
+void Dev::Write(uint64 ptr, uint16 i)
+void Dev::Write(uint64 ptr, uint i)
+void Dev::Write(uint64 ptr, uint64 i)
+void Dev::Write(uint64 ptr, float f)
+void Dev::Write(uint64 ptr, double f)
+void Dev::Write(uint64 ptr, const vec2&in v)
+void Dev::Write(uint64 ptr, const vec3&in v)
+void Dev::Write(uint64 ptr, const vec4&in v)
+void Dev::Write(uint64 ptr, const int2&in v)
+void Dev::Write(uint64 ptr, const int3&in v)
+void Dev::Write(uint64 ptr, const nat2&in v)
+void Dev::Write(uint64 ptr, const nat3&in v)
+void Dev::Write(uint64 ptr, const iso3&in v)
+void Dev::Write(uint64 ptr, const iso4&in v)
+void Dev::WriteCString(uint64 ptr, const string&in str)
+int8 Dev::GetOffsetInt8(const ?&in nod, uint offset)
+Returns int8
+int16 Dev::GetOffsetInt16(const ?&in nod, uint offset)
+Returns int16
+int Dev::GetOffsetInt32(const ?&in nod, uint offset)
+Returns int
+int64 Dev::GetOffsetInt64(const ?&in nod, uint offset)
+Returns int64
+uint8 Dev::GetOffsetUint8(const ?&in nod, uint offset)
+Returns uint8
+uint16 Dev::GetOffsetUint16(const ?&in nod, uint offset)
+Returns uint16
+uint Dev::GetOffsetUint32(const ?&in nod, uint offset)
+Returns uint
+uint64 Dev::GetOffsetUint64(const ?&in nod, uint offset)
+Returns uint64
+float Dev::GetOffsetFloat(const ?&in nod, uint offset)
+Returns float
+double Dev::GetOffsetDouble(const ?&in nod, uint offset)
+Returns double
+vec2 Dev::GetOffsetVec2(const ?&in nod, uint offset)
+Returns vec2
+vec3 Dev::GetOffsetVec3(const ?&in nod, uint offset)
+Returns vec3
+vec4 Dev::GetOffsetVec4(const ?&in nod, uint offset)
+Returns vec4
+int2 Dev::GetOffsetInt2(const ?&in nod, uint offset)
+Returns int2
+int3 Dev::GetOffsetInt3(const ?&in nod, uint offset)
+Returns int3
+nat2 Dev::GetOffsetNat2(const ?&in nod, uint offset)
+Returns nat2
+nat3 Dev::GetOffsetNat3(const ?&in nod, uint offset)
+Returns nat3
+iso3 Dev::GetOffsetIso3(const ?&in nod, uint offset)
+Returns iso3
+iso4 Dev::GetOffsetIso4(const ?&in nod, uint offset)
+Returns iso4
+CMwNod@ Dev::GetOffsetNod(const ?&in nod, uint offset)
+Returns CMwNod@
+string Dev::GetOffsetString(const ?&in nod, uint offset)
+Returns string
+void Dev::SetOffset(const ?&in nod, uint offset, const int8&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const int16&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const int&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const int64&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const uint8&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const uint16&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const uint&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const uint64&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const float&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const double&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const vec2&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const vec3&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const vec4&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const int2&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const int3&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const nat2&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const nat3&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const iso3&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, const iso4&in v)
+void Dev::SetOffset(const ?&in nod, uint offset, CMwNod@ newNod)
+void Dev::SetOffset(const ?&in nod, uint offset, const string&in str)
+enum Dev::PushRegisters
+(funcdef) bool Dev::ProcIntercept(CMwStack&in)
+Returns bool
+(funcdef) bool Dev::ProcInterceptEx(CMwStack&in, CMwNod@)
+Returns bool

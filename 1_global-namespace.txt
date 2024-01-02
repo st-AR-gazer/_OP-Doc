@@ -1,0 +1,250 @@
+Global namespace
+Namespace
+The global namespace.
+
+class MwId
+class MwSArray
+Base array structure type used in ManiaPlanet. Can not be modified right now.
+
+class MwStridedArray
+Strided array structure type used in ManiaPlanet. Can not be modified right now.
+
+class MwFastArray
+Array type used in ManiaPlanet.
+
+class MwFastBuffer
+Buffer type used in ManiaPlanet.
+
+class MwFastBufferCat
+Buffer cat type used in ManiaPlanet.
+
+class MwRefBuffer
+Reference buffer type used in ManiaPlanet, which contains a static 32 item buffer.
+
+class MwNodPool
+An allocated pool of nods.
+
+class MwVirtualArray
+A virtually accessed array.
+
+class array
+The main array type used in Openplanet. For usage information, see Angelscript's documentation. Note that the members are not named the same in Openplanet as they are normally in Angelscript.
+
+class string
+The string class used in Openplanet as well as the game.
+
+class wstring
+The wide string class used primarily in the game for unicode strings. Since Trackmania (2020) the game switched to UTF-8 by default, making wstring essentially the same as string.
+
+class dictionaryValue
+class dictionary
+The main dictionary type used in Openplanet.
+
+class ref
+class vec2
+A 2-dimensional vector.
+
+class vec3
+A 3-dimensional vector.
+
+class vec4
+A 4-dimensional vector.
+
+class int2
+A 2-dimensional vector for integers.
+
+class int3
+A 3-dimensional vector for integers.
+
+class nat2
+A 2-dimensional vector for unsigned integers.
+
+class nat3
+A 3-dimensional vector for unsigned integers.
+
+class iso3
+A matrix with 3 rows and 2 columns.
+
+class mat3
+A matrix with 3 rows and 3 columns.
+
+class iso4
+A matrix with 4 rows and 3 columns.
+
+class mat4
+A matrix with 4 rows and 4 columns.
+
+class quat
+A quaternion.
+
+class RGBAColor
+The RGBAColor type used in Maniaplanet.
+
+class MemoryBuffer
+A buffer of memory. Can be used in IO or Import calls. You can write to this or read from it, which moves the cursor within the buffer.
+
+class DataRef
+The data reference type used in Maniaplanet.
+
+class CMwStack
+Stack class used for calling engine procs.
+
+string tostring(const ?&in)
+Returns a string representation of the given object, if possible. Will call an object's ToString() method if it exists. Throws an exception if it was unable to.
+
+Returns string
+void trace(const string&in)
+Prints a trace to Openplanet's log.
+
+void print(const string&in)
+Prints a line to Openplanet's log.
+
+void warn(const string&in)
+Prints a warning to Openplanet's log.
+
+void error(const string&in)
+Prints an error to Openplanet's log.
+
+void trace(?&in)
+Prints a trace to Openplanet's log. Will call a passed object's ToString() method if it exists.
+
+void print(?&in)
+Prints a line to Openplanet's log. Will call a passed object's ToString() method if it exists.
+
+void warn(?&in)
+Prints a warning to Openplanet's log. Will call a passed object's ToString() method if it exists.
+
+void error(?&in)
+Prints an error to Openplanet's log. Will call a passed object's ToString() method if it exists.
+
+void throw(const string&in)
+Throws a script exception.
+
+string getExceptionInfo()
+Returns the exception string.
+
+Returns string
+void sleep(uint64 ms)
+Yields the current execution for a given period of time. Execution will be resumed after that time.
+
+void yield()
+Yields the current execution. Execution will be resumed the next game tick.
+
+void await(Meta::PluginCoroutine@ routine)
+Yields the current execution until the given coroutine has finished.
+
+void await(Meta::PluginCoroutine@[]@ routines)
+Yields the current execution until all the given coroutines have finished.
+
+void awaitany(Meta::PluginCoroutine@[]@ routines)
+Yields the current execution until at least 1 of the given coroutines have finished.
+
+Meta::PluginCoroutine@ startnew(CoroutineFunc@ func)
+Starts a new yieldable coroutine from the given function. Function should be a declaration of 'void Func()'.
+
+Returns Meta::PluginCoroutine@
+Meta::PluginCoroutine@ startnew(CoroutineFuncUserdata@ func, ref userdata)
+Starts a new yieldable coroutine from the given function which also provides a userdata handle parameter. Function should be a declaration of 'void Func(ref@)'.
+
+Returns Meta::PluginCoroutine@
+Meta::PluginCoroutine@ startnew(CoroutineFuncUserdataInt64@ func, const int userdata)
+Starts a new yieldable coroutine from the given function which also provides a userdata signed integer. Function should be a declaration of 'void Func(int64)'.
+
+Returns Meta::PluginCoroutine@
+Meta::PluginCoroutine@ startnew(CoroutineFuncUserdataInt64@ func, const int64 userdata)
+Starts a new yieldable coroutine from the given function which also provides a userdata signed integer. Function should be a declaration of 'void Func(int64)'.
+
+Returns Meta::PluginCoroutine@
+Meta::PluginCoroutine@ startnew(CoroutineFuncUserdataUint64@ func, const uint userdata)
+Starts a new yieldable coroutine from the given function which also provides a userdata unsigned integer. Function should be a declaration of 'void Func(uint64)'.
+
+Returns Meta::PluginCoroutine@
+Meta::PluginCoroutine@ startnew(CoroutineFuncUserdataUint64@ func, const uint64 userdata)
+Starts a new yieldable coroutine from the given function which also provides a userdata unsigned integer. Function should be a declaration of 'void Func(uint64)'.
+
+Returns Meta::PluginCoroutine@
+Meta::PluginCoroutine@ startnew(CoroutineFuncUserdataDouble@ func, const double userdata)
+Starts a new yieldable coroutine from the given function which also provides a userdata floating point number. Function should be a declaration of 'void Func(double)'.
+
+Returns Meta::PluginCoroutine@
+Meta::PluginCoroutine@ startnew(CoroutineFuncUserdataString@ func, const string&in userdata)
+Starts a new yieldable coroutine from the given function which also provides a userdata string. Function should be a declaration of 'void Func(const string &in)'.
+
+Returns Meta::PluginCoroutine@
+string StripFormatCodes(const string&in s)
+Strips all formatting codes from a string.
+
+Returns string
+string StripNonColorFormatCodes(const string&in s)
+Strips all non-color formatting codes from a string.
+
+Returns string
+string ColoredString(const string&in s)
+Takes a string, converts Maniaplanet-style formatting color codes and turns them into Openplanet UI color codes. This will also get rid of all unsupported non-color formatting codes.
+
+Returns string
+void ExploreNod(const string&in name, const ?&in)
+Opens the Nod Explorer with the given nod and the given tab name.
+
+void ExploreNod(const string&in name, const ?&in, const Reflection::MwClassInfo@ classInfo)
+Opens the Nod Explorer with the given nod, the given tab name, and the given class info. Only use this for exploring structs.
+
+void ExploreNod(const ?&in)
+Opens the Nod Explorer with the given nod.
+
+bool OpenplanetHasFullPermissions()
+Returns true if Openplanet has full permissions. (On Trackmania, this means having the Club Edition of the game.)
+
+Returns bool
+bool OpenplanetHasPaidPermissions()
+Returns true if Openplanet has (at least) paid permissions. (On Trackmania, this means having the Standard or Club Edition of the game.)
+
+Returns bool
+CGameCtnApp@ GetApp()
+Gets the main game app object.
+
+Returns CGameCtnApp@
+CSystemFidFile@ GetFidFromNod(const ?&in)
+Gets the fid of the given nod, if it's set.
+
+Returns CSystemFidFile@
+string GetLocalLogin()
+Gets the logged in user's username.
+
+Returns string
+void RegisterLoadCallback(uint id)
+Tells the scripting to invoke the currently executing plugin when nods are loaded with the given class ID.
+
+void UnregisterLoadCallback(uint id)
+Tells the scripting to stop invoking the currently executing plugin when nods are loaded with the given class ID.
+
+void OpenBrowserURL(const string&in url)
+Opens the default web browser with the given URL.
+
+void OpenExplorerPath(const string&in path)
+Opens windows explorer to the specified absolute path.
+
+enum VirtualKey
+Virtual keys that can be pressed by the user and received in scripts.
+
+(funcdef) bool less_nonconst(T&in a, T&in b)
+Non-const sorting funcdef, used in SortNonConst.
+
+Returns bool
+(funcdef) void CoroutineFunc()
+A basic coroutine function.
+
+(funcdef) void CoroutineFuncUserdata(ref)
+A coroutine function with a userdata handle.
+
+(funcdef) void CoroutineFuncUserdataInt64(int64)
+A coroutine function with a userdata integer.
+
+(funcdef) void CoroutineFuncUserdataUint64(uint64)
+A coroutine function with a userdata unsigned integer.
+
+(funcdef) void CoroutineFuncUserdataDouble(double)
+A coroutine function with a userdata double.
+
+(funcdef) void CoroutineFuncUserdataString(const string&in)
+A coroutine function with a userdata string.

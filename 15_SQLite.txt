@@ -1,0 +1,9 @@
+SQLite
+Namespace
+SQLite database access.
+
+class SQLite::Statement
+A prepared SQLite statement and result set. Note that SQLite statements can be relatively IO-heavy depending on its use. Refer to the SQLite documentation for more information.
+
+class SQLite::Database
+An SQLite database.

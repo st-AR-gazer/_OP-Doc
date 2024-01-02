@@ -1,0 +1,20 @@
+Audio::Voice
+Class
+Represents a currently playing voice of audio.
+
+Methods
+void Play()
+void Pause()
+bool IsPaused()
+Returns bool
+double GetPosition()
+Gets the current position within the sample in seconds.
+
+Returns double
+double GetLength()
+Gets the length of the sample in seconds. Note that on streamed samples, this may be expensive on the first call as it may have to decode the entire stream.
+
+Returns double
+float GetGain()
+Returns float
+void SetGain(float gain)

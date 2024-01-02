@@ -1,0 +1,114 @@
+nvg
+Namespace
+NanoVG bindings.
+
+class nvg::Texture
+Represents a texture for the NanoVG API.
+
+class nvg::Paint
+A paint style that can be used as a fill or a stroke.
+
+Texture@ nvg::LoadTexture(const string&in filename, int flags = 0)
+Load a texture for the NanoVG API.
+
+Returns nvg::Texture@
+Texture@ nvg::LoadTexture(MemoryBuffer&in buffer, int flags = 0)
+Load a texture for the NanoVG API from a memory buffer.
+
+Returns nvg::Texture@
+int nvg::LoadFont(const string&in filename, bool fallbackIcons = false, bool fallbackArial = false)
+Load a font for use in the NanoVG API.
+
+Returns int
+void nvg::Save()
+void nvg::Restore()
+void nvg::Reset()
+void nvg::ShapeAntiAlias(bool enabled)
+void nvg::StrokeColor(const vec4&in color)
+void nvg::StrokePaint(const Paint&in paint)
+void nvg::FillColor(const vec4&in color)
+void nvg::FillPaint(const Paint&in paint)
+void nvg::MiterLimit(float limit)
+void nvg::StrokeWidth(float size)
+void nvg::LineCap(LineCapType cap)
+void nvg::LineJoin(LineCapType join)
+void nvg::GlobalAlpha(float alpha)
+void nvg::ResetTransform()
+void nvg::SetTransform(const mat3&in t)
+mat3 nvg::CurrentTransform()
+Returns mat3
+void nvg::Transform(const mat3&in t)
+void nvg::Translate(float x, float y)
+void nvg::Translate(const vec2&in)
+void nvg::Rotate(float angle)
+void nvg::SkewX(float angle)
+void nvg::SkewY(float angle)
+void nvg::Scale(float x, float y)
+void nvg::Scale(const vec2&in)
+Paint nvg::LinearGradient(const vec2&in start, const vec2&in end, const vec4&in color1, const vec4&in color2)
+Returns nvg::Paint
+Paint nvg::BoxGradient(float x, float y, float w, float h, float r, float f, const vec4&in color1, const vec4&in color2)
+Returns nvg::Paint
+Paint nvg::BoxGradient(const vec2&in pos, const vec2&in size, float r, float f, const vec4&in color1, const vec4&in color2)
+Returns nvg::Paint
+Paint nvg::RadialGradient(const vec2&in center, float inr, float outr, const vec4&in color1, const vec4&in color2)
+Returns nvg::Paint
+Paint nvg::TexturePattern(const vec2&in origin, const vec2&in size, float angle, Texture@ texture, float alpha)
+Returns nvg::Paint
+void nvg::Scissor(float x, float y, float w, float h)
+void nvg::IntersectScissor(float x, float y, float w, float h)
+void nvg::ResetScissor()
+void nvg::AddFallbackFont(int baseFont, int fallbackFont)
+void nvg::FontFace(int font)
+void nvg::FontSize(float size)
+void nvg::FontBlur(float blur)
+void nvg::TextLetterSpacing(float spacing)
+void nvg::TextLineHeight(float lineHeight)
+void nvg::TextAlign(int align)
+float nvg::Text(float x, float y, const string&in str)
+Draws text using the current font settings.
+
+Returns float
+float nvg::Text(const vec2&in pos, const string&in str)
+Draws text using the current font settings.
+
+Returns float
+void nvg::TextBox(float x, float y, float w, const string&in str)
+Draws text inside of a word wrapping box using the current font settings.
+
+void nvg::TextBox(const vec2&in pos, float w, const string&in str)
+Draws text inside of a word wrapping box using the current font settings.
+
+vec2 nvg::TextBounds(const string&in str)
+Measures the size of the given text using the current font settings.
+
+Returns vec2
+vec2 nvg::TextBoxBounds(float w, const string&in str)
+Measures the size of the given text inside of a word wrapping box using the current font settings.
+
+Returns vec2
+void nvg::BeginPath()
+void nvg::MoveTo(const vec2&in pos)
+void nvg::LineTo(const vec2&in pos)
+void nvg::BezierTo(const vec2&in c1, const vec2&in c2, const vec2&in pos)
+void nvg::QuadTo(const vec2&in c, const vec2&in pos)
+void nvg::ArcTo(const vec2&in pos1, const vec2&in pos2, float radius)
+void nvg::ClosePath()
+void nvg::PathWinding(Winding dir)
+void nvg::Arc(const vec2&in center, float r, float a0, float a1, Winding dir)
+void nvg::Rect(float x, float y, float w, float h)
+void nvg::Rect(const vec2&in pos, const vec2&in size)
+void nvg::RoundedRect(float x, float y, float w, float h, float r)
+void nvg::RoundedRect(const vec2&in pos, const vec2&in size, float r)
+void nvg::RoundedRectVarying(float x, float y, float w, float h, float rtl, float rtr, float rbr, float rbl)
+void nvg::RoundedRectVarying(const vec2&in pos, const vec2&in size, float rtl, float rtr, float rbr, float rbl)
+void nvg::Ellipse(const vec2&in center, float rx, float ry)
+void nvg::Circle(const vec2&in center, float r)
+void nvg::Fill()
+void nvg::Stroke()
+enum nvg::TextureFlags
+Flags to use when loading NanoVG textures.
+
+enum nvg::LineCapType
+enum nvg::Winding
+enum nvg::Align

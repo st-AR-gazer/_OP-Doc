@@ -1,0 +1,39 @@
+SQLite::Statement
+Class
+A prepared SQLite statement and result set. Note that SQLite statements can be relatively IO-heavy depending on its use. Refer to the SQLite documentation for more information.
+
+Methods
+void Reset()
+void Execute()
+bool NextRow()
+Returns bool
+string GetQuery()
+Returns string
+string GetQueryExpanded()
+Returns string
+int GetColumnCount()
+Returns int
+string GetColumnName(int index)
+Returns string
+float GetColumnFloat(const string&in name)
+Returns float
+double GetColumnDouble(const string&in name)
+Returns double
+int GetColumnInt(const string&in name)
+Returns int
+int64 GetColumnInt64(const string&in name)
+Returns int64
+string GetColumnString(const string&in name)
+Returns string
+MemoryBuffer@ GetColumnBuffer(const string&in name)
+Returns MemoryBuffer@
+void Bind(int index, float)
+void Bind(int index, double)
+void Bind(int index, int64)
+void Bind(int index, const string&in)
+void Bind(int index, const MemoryBuffer&in)
+void Bind(const string&in name, float)
+void Bind(const string&in name, double)
+void Bind(const string&in name, int64)
+void Bind(const string&in name, const string&in)
+void Bind(const string&in name, const MemoryBuffer&in)

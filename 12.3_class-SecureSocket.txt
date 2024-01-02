@@ -1,0 +1,69 @@
+Net::SecureSocket
+Class
+Represents a TCP socket with a TLS encryption layer.
+
+Behaviors
+Net::SecureSocket@ SecureSocket()
+Returns Net::SecureSocket@
+Methods
+bool Connect(const string&in host, uint16 port)
+Returns bool
+bool Connecting()
+Returns bool
+void Close()
+bool CanRead()
+Returns bool
+bool CanWrite()
+Returns bool
+int Available()
+Returns int
+string ReadRaw(int bytes)
+Returns string
+bool ReadLine(string&out str)
+Returns bool
+bool WriteRaw(const string&in str)
+Returns bool
+int8 ReadInt8()
+Returns int8
+int16 ReadInt16()
+Returns int16
+int ReadInt32()
+Returns int
+int64 ReadInt64()
+Returns int64
+uint8 ReadUint8()
+Returns uint8
+uint16 ReadUint16()
+Returns uint16
+uint ReadUint32()
+Returns uint
+uint64 ReadUint64()
+Returns uint64
+float ReadFloat()
+Returns float
+double ReadDouble()
+Returns double
+bool Write(int8 x)
+Returns bool
+bool Write(int16 x)
+Returns bool
+bool Write(int x)
+Returns bool
+bool Write(int64 x)
+Returns bool
+bool Write(uint8 x)
+Returns bool
+bool Write(uint16 x)
+Returns bool
+bool Write(uint x)
+Returns bool
+bool Write(uint64 x)
+Returns bool
+bool Write(float x)
+Returns bool
+bool Write(double x)
+Returns bool
+bool Write(const string&in x)
+Returns bool
+bool Write(MemoryBuffer&in b, uint64 size = 0)
+Returns bool

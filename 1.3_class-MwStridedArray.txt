@@ -1,0 +1,22 @@
+MwStridedArray
+Class
+Strided array structure type used in ManiaPlanet. Can not be modified right now.
+
+Behaviors
+~MwStridedArray()
+MwStridedArray(int&in)
+Methods
+T& opIndex(uint index)
+Operator
+obj[x]
+Returns T
+const T& opIndex(uint index) const
+Operator
+obj[x]
+Returns T
+uint Length() const
+Returns uint
+uint get_Length() const
+Property
+obj.Length
+Returns uint

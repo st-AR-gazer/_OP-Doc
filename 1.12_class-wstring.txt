@@ -1,0 +1,41 @@
+wstring
+Class
+The wide string class used primarily in the game for unicode strings. Since Trackmania (2020) the game switched to UTF-8 by default, making wstring essentially the same as string.
+
+Behaviors
+~wstring()
+wstring()
+wstring(const wstring&in)
+wstring(const string&in)
+wstring(const SConstStringInt&in)
+Methods
+wstring& opAssign(const wstring&in)
+Operator
+obj = x
+Returns wstring
+string opImplConv() const
+Operator
+string x = obj
+Returns string
+bool StartsWith(const wstring&in) const
+Returns true if the string starts with the given substring.
+
+Returns bool
+bool EndsWith(const wstring&in) const
+Returns true if the string ends with the given substring.
+
+Returns bool
+bool Contains(const wstring&in) const
+Returns true if the string contains the given substring.
+
+Returns bool
+wstring SubStr(int start, int length = 0) const
+Returns a portion of the string from the index and length. For example; for the string "Hello", SubStr(1, 3) returns "ell".
+
+Returns wstring
+int get_Length() const
+Property
+obj.Length
+The length of the string in bytes. On games older than Trackmania (2020), this returns the length of the string in characters.
+
+Returns int

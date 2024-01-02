@@ -1,0 +1,67 @@
+Meta::Plugin
+Class
+Information about an Openplanet plugin.
+
+Methods
+string get_ID()
+Property
+obj.ID
+Returns string
+Meta::PluginType get_Type()
+Property
+obj.Type
+Returns Meta::PluginType
+string get_Name()
+Property
+obj.Name
+Returns string
+string get_Author()
+Property
+obj.Author
+Returns string
+string get_Category()
+Property
+obj.Category
+Returns string
+string[]@ get_Blocks()
+Property
+obj.Blocks
+Returns string[]@
+string[]@ get_Dependencies()
+Property
+obj.Dependencies
+Returns string[]@
+string[]@ get_OptionalDependencies()
+Property
+obj.OptionalDependencies
+Returns string[]@
+int get_SiteID()
+Property
+obj.SiteID
+Returns int
+string get_Version()
+Property
+obj.Version
+Returns string
+Meta::PluginSource get_Source()
+Property
+obj.Source
+Returns Meta::PluginSource
+string get_SourcePath()
+Property
+obj.SourcePath
+Returns string
+bool get_Enabled()
+Property
+obj.Enabled
+Returns bool
+bool get_Unstable()
+Property
+obj.Unstable
+Returns bool
+Meta::PluginSetting@[]@ GetSettings()
+Returns Meta::PluginSetting@[]@
+Meta::PluginSetting@ GetSetting(const string&in varName)
+Returns Meta::PluginSetting@
+void Enable()
+void Disable()

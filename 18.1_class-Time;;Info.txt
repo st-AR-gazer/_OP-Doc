@@ -1,0 +1,11 @@
+Time::Info
+Class
+Information about a specific timestamp, simplified into its common components.
+
+Properties
+int Year
+int Month
+int Day
+int Hour
+int Minute
+int Second
